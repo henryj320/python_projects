@@ -5,16 +5,16 @@ Last update: 2022-08-05 17:35
 Future Project Ideas:
 
 <strong>Title:</strong> watt_checker
-<strong>Language: Python / Powershell
-<strong>Overview: Records the Watts-used by the laptop every 30 minutes. Record the value into an Excel spreadsheet so that a chart can be automatically generated or updated every day. Alternatively, use Python so that matplotlib and seaborn can be used.
+<strong>Language:</strong> Python / Powershell
+<strong>Overview:</strong> Records the Watts-used by the laptop every 30 minutes. Record the value into an Excel spreadsheet so that a chart can be automatically generated or updated every day. Alternatively, use Python so that matplotlib and seaborn can be used.
 
 <strong>Title:</strong> weekly_goals_GUI
-<strong>Language: Python
-<strong>Overview: Shows a progress bar for your weekly goals. For example, a progress bar on how close to your reading goal you are. You could also autorun this on startup and set your background to the progress bars by screenshotting and setting as the wallpaper.
+<strong>Language:</strong> Python
+<strong>Overview:</strong> Shows a progress bar for your weekly goals. For example, a progress bar on how close to your reading goal you are. You could also autorun this on startup and set your background to the progress bars by screenshotting and setting as the wallpaper.
 
 <strong>Title:</strong> total_screentime
-Language:</strong> Android
-Overview:</strong> Records the screentime you have across all your devices, not just your mobile phone. May require some database or message sending between devices.
+<strong>Language:</strong> Android
+<strong>Overview:</strong> Records the screentime you have across all your devices, not just your mobile phone. May require some database or message sending between devices.
 
 <strong>Title:</strong> wifi_users_tracker
 <strong>Language:</strong> Linux Script
