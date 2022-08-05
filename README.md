@@ -4,7 +4,7 @@ Last update: 2022-08-05 17:35
 
 Future Project Ideas:
 
-<strong>Title:</strong> watt_checker
+<strong>Title:</strong> watt_checker\n
 <strong>Language:</strong> Python / Powershell
 <strong>Overview:</strong> Records the Watts-used by the laptop every 30 minutes. Record the value into an Excel spreadsheet so that a chart can be automatically generated or updated every day. Alternatively, use Python so that matplotlib and seaborn can be used.
 
