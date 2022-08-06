@@ -1,8 +1,7 @@
 # python_projects
-
 Last update: 2022-08-05 17:35
 
-<h1>Future Project Ideas</h1>
+<h2>Future Project Ideas</h2>
 
 <strong>Title:</strong> watt_checker<br />
 <strong>Language:</strong> Python / Powershell<br />
