@@ -1,6 +1,6 @@
 # python_projects
 Last update: 2022-08-05 17:35
-
+<br />
 <h2>Future Project Ideas</h2>
 
 <strong>Title:</strong> watt_checker<br />
