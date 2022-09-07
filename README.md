@@ -9,7 +9,7 @@ Last update: 2022-08-06 15:53
 
 <strong>Title:</strong> weekly_goals_GUI<br />
 <strong>Language:</strong> Python<br />
-<strong>Overview:</strong> Shows a progress bar for your weekly goals. For example, a progress bar on how close to your reading goal you are. You could also autorun this on startup and set your background to the progress bars by screenshotting and setting as the wallpaper.<br /><br />
+<strong>Overview:</strong> Shows a progress bar for your weekly goals. For example, a progress bar on how close to your reading goal you are. You could also autorun this on startup and set your background to the progress bars by screenshotting and setting as the wallpaper. It could also show how much of your 7.5 * 5 hrs of work you've done so far.<br /><br />
 
 <strong>Title:</strong> total_screentime<br />
 <strong>Language:</strong> Android<br />
