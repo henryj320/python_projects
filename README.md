@@ -12,6 +12,7 @@ Last update: 2022-09-15 15:53
 <br>test folder - To store tests.
 <br>README
 <br>Example .py module - Make it reference an environment variable and have a example method that can be run (and how to run it)
+<br>.gitignore - Git has default ones
 <br /><br />
 
 <strong>Title:</strong> watt_checker<br />
