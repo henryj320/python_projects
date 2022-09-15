@@ -6,13 +6,13 @@ Last update: 2022-09-15 15:53
 <strong>Title:</strong> python_template<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> A template for later Python projects. Containing:
-<br>cookiecutter - A template for the whole project.
-<br>tox - So that we can use pydocstyle and pycodestyle.
-<br>.env - For environment variables.
-<br>test folder - To store tests.
-<br>README
-<br>Example .py module - Make it reference an environment variable and have a example method that can be run (and how to run it)
-<br>.gitignore - Git has default ones
+<br><i>cookiecutter</i> - A template for the whole project.
+<br><i>tox</i>  - So that we can use pydocstyle and pycodestyle.
+<br><i>.env</i>  - For environment variables.
+<br><i>test folder</i>  - To store tests.
+<br><i>README</i> 
+<br><i>Example .py module</i>  - Make it reference an environment variable and have a example method that can be run (and how to run it)
+<br><i>.gitignore</i>  - Git has default ones
 <br /><br />
 
 <strong>Title:</strong> watt_checker<br />
