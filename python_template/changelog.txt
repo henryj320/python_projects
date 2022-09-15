@@ -1,0 +1,47 @@
+1. Created feature/python_template_core
+2. Added a folder for it
+3. Installed miniconda version 4.1.2(Python 3.8) into "Documents/Software/miniconda3"
+        bash Miniconda3-py38_4.12.0-Linux-x86_64.sh
+4. Made a README.md file for python_template
+5. Installed cookiecutter
+        conda config --add channels conda-forge
+        conda install cookiecutter
+5. Made a .gitignore file
+6. Made a cookiecutter.json file and populated it
+        {
+           "python_version": ["py38"],
+            "project_name": "python_template",
+            "project_slug": "{{ cookiecutter.project_name | slugify }}",
+            "author": "Henry James",
+            "author_email": "henryj320@gmail.com",
+            "directory_name": "Hello",
+            "file_name": "basic_file",
+            "greeting_recipient": "Henry"
+        }
+7. Inside of python_template, made a directory called {{cookiecutter.directory_name}}
+        Contains "{{cookiecutter.}}" so that it can be set in cookiecutter.json
+        mkdir
+        cd into it
+8. Added my files into {{cookiecutter.directory_name}}
+9. Added directory_name, file_name and greeting_recipient to cookiecutter.json
+        These are referenced making the new project, and can be referenced inside of files#
+10. You can then make a new template from this
+        cd into the place that you want to make the file
+        cookiecutter ~/Documents/python_projects/python_template
+11. Installed tox
+        conda install -c conda-forge tox-conda
+12. Made a tox.ini file
+        Used the command tox-quickstart
+13. Made a setup.py file
+        You will need to manually set the setup file each time
+14. Ran tox
+        This made a .tox and new_project_directory.egg-info file
+        You can now test your code with command "tox"
+15. Added pycodestyle and pydocstyle to auto run on "tox" command
+16. Tested that it all works
+        cd ~/Documents/test
+        cookiecutter ~/Documents/python_projects/python_template
+        tox
+17. Changed pycodestyle not to run on some files
+18. Made a .env file. Still struggling to reference from it. Got it working
+

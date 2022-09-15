@@ -1,0 +1,11 @@
+{
+    "python_version": ["py38"],
+    "project_name": "python_template",
+    "project_slug": "{{ cookiecutter.project_name | slugify }}",
+    "description": "Write a description",
+    "author": "Henry James",
+    "author_email": "henryj320@gmail.com",
+    "directory_name": "{{ cookiecutter.project_name}}",
+    "basic_file_name": "basic_file",
+    "greeting_recipient": "Henry"
+}
