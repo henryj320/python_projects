@@ -7,7 +7,7 @@ Last update: 2022-09-15 15:53
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> A template for later Python projects. Containing:
 <br>cookiecutter - A template for the whole project.
-<br>tox - So that we can use pycodstyle and pycodestyle.
+<br>tox - So that we can use pydocstyle and pycodestyle.
 <br>.env - For environment variables.
 <br>test folder - To store tests.
 <br>README
