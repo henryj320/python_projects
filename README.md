@@ -30,3 +30,7 @@ Last update: 2022-08-06 15:53
 <strong>Title:</strong> centre_country_shower<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> Shows the centre of a given country based on different factors: geological, average age, population, etc. This would show age densities, etc.<br /><br />
+
+<strong>Title:</strong> treasure_find<br />
+<strong>Language:</strong> Android<br />
+<strong>Overview:</strong> A fun running game. Places x items in a random location within y metres. The user "picks them up" when within 10 metres. Run ends when the last has been picked up. Show the locations at the end.<br /><br />
