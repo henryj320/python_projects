@@ -1,7 +1,18 @@
 # python_projects
-Last update: 2022-08-06 15:53
+Last update: 2022-09-15 15:53
 <br /><br />
 <h2>Future Project Ideas</h2>
+
+<strong>Title:</strong> python_template<br />
+<strong>Language:</strong> Python<br />
+<strong>Overview:</strong> A template for later Python projects. Containing:
+<br>cookiecutter - A template for the whole project.
+<br>tox - So that we can use pycodstyle and pycodestyle.
+<br>.env - For environment variables.
+<br>test folder - To store tests.
+<br>README
+<br>Example .py module - Make it reference an environment variable and have a example method that can be run (and how to run it)
+<br /><br />
 
 <strong>Title:</strong> watt_checker<br />
 <strong>Language:</strong> Python / Powershell<br />
