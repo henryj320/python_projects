@@ -1,19 +1,8 @@
 # python_projects
-Last update: 2022-09-15 15:53
+Last update: 2022-09-16 00:07
 <br /><br />
 <h2>Future Project Ideas</h2>
-
-<strong>Title:</strong> python_template<br />
-<strong>Language:</strong> Python<br />
-<strong>Overview:</strong> A template for later Python projects. Containing:
-<br><i>cookiecutter</i> - A template for the whole project.
-<br><i>tox</i>  - So that we can use pydocstyle and pycodestyle.
-<br><i>.env</i>  - For environment variables.
-<br><i>test folder</i>  - To store tests.
-<br><i>README</i> 
-<br><i>Example .py module</i>  - Make it reference an environment variable and have a example method that can be run (and how to run it)
-<br><i>.gitignore</i>  - Git has default ones
-<br /><br />
+<hr>
 
 <strong>Title:</strong> watt_checker<br />
 <strong>Language:</strong> Python / Powershell<br />
@@ -50,5 +39,19 @@ Last update: 2022-09-15 15:53
 
 <br />
 <h2>Completed Project Ideas</h2>
+<hr>
 
-None<br />
+<strong>Title:</strong> python_template<br />
+<strong>Language:</strong> Python<br />
+<strong>Overview:</strong> A template for later Python projects. Containing:
+<br><strike><i>cookiecutter</i> - A template for the whole project.</strike>
+<br><strike><i>tox</i>  - So that we can use pydocstyle and pycodestyle.</strike>
+<br><strike><i>.env</i>  - For environment variables.</strike>
+<br><strike><i>test folder</i>  - To store tests.</strike>
+<br><strike><i>README</i></strike>
+<br><strike><i>Example .py module</i>  - Make it reference an environment variable and have a example method that can be run (and how to run it)</strike>
+<br><strike><i>.gitignore</i>  - Git has default ones</strike><br />
+<strong>Result:</strong> I now have a cookiecutter template up and running for future Python projects. You can call the cookiecutter template by downloading it to your machine and running:<br>
+<i>cd... </i><br />
+<i>cookiecutter ~/Documents/python_projects/python_template</i>
+<br /><br />
