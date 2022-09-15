@@ -46,3 +46,9 @@ Last update: 2022-09-15 15:53
 <strong>Title:</strong> treasure_find<br />
 <strong>Language:</strong> Android<br />
 <strong>Overview:</strong> A fun running game. Places x items in a random location within y metres. The user "picks them up" when within 10 metres. Run ends when the last has been picked up. Show the locations at the end.<br /><br />
+
+
+<br /><br />
+<h2>Future Project Ideas</h2>
+
+None<br />
