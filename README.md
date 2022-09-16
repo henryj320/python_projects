@@ -40,6 +40,10 @@ Last update: 2022-09-16 00:07
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> The user provides a location. The script generates a path to coordinates x metres away and adds this as a route on Google Maps and outputs this to the user. This allows the user to run to a random place every time the exact distance away that they want.<br /><br />
 
+<strong>Title:</strong> tcp_message_sender_and_receiver<br />
+<strong>Language:</strong> Python<br />
+<strong>Overview:</strong> Write a program that sends and receives message from the basics. Generate a TCP segment with all of the fields in binary. Set up a port to send on and a port to receive on. Use your Java code as a reference. Importantly, the receiver needs to be listening on the port. Use datasubs to find how to run an app on a certain portand listen to requests. Set out the plan logically.<br /><br />
+
 
 <br />
 <h2>Completed Project Ideas</h2>
