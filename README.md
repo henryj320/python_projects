@@ -6,7 +6,7 @@ Last update: 2022-09-16 00:07
 
 <strong>Title:</strong> watt_checker<br />
 <strong>Language:</strong> Python / Powershell<br />
-<strong>Overview:</strong> Records the Watts-used by the laptop every 30 minutes. Record the value into an Excel spreadsheet so that a chart can be automatically generated or updated every day. Alternatively, use Python so that matplotlib and seaborn can be used.<br /><br />
+<strong>Overview:</strong> Records the Watts-used by the laptop every 30 minutes. Record the value into an Excel spreadsheet so that a chart can be automatically generated or updated every day. Alternatively, use Python so that matplotlib and seaborn can be used. On brief research, it is not easy to grab the current power draw of a computer. Intel has some built-in, but may be complicated.<br /><br />
 
 <strong>Title:</strong> weekly_goals_GUI<br />
 <strong>Language:</strong> Python<br />
@@ -35,6 +35,10 @@ Last update: 2022-09-16 00:07
 <strong>Title:</strong> treasure_find<br />
 <strong>Language:</strong> Android<br />
 <strong>Overview:</strong> A fun running game. Places x items in a random location within y metres. The user "picks them up" when within 10 metres. Run ends when the last has been picked up. Show the locations at the end.<br /><br />
+
+<strong>Title:</strong> running_route_generator<br />
+<strong>Language:</strong> Python<br />
+<strong>Overview:</strong> The user provides a location. The script generates a path to coordinates x metres away and adds this as a route on Google Maps and outputs this to the user. This allows the user to run to a random place every time the exact distance away that they want.<br /><br />
 
 
 <br />
