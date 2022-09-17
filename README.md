@@ -82,6 +82,7 @@ Last update: 2022-09-16 00:07
 <hr>
 
 <strong>Title:</strong> python_template<br />
+<strong>Date Completed:</strong> 2022-09-15<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> A template for later Python projects. Containing:
 <br><strike><i>cookiecutter</i> - A template for the whole project.</strike>
@@ -97,6 +98,7 @@ Last update: 2022-09-16 00:07
 <br /><br />
 
 <strong>Title:</strong> basic_messaging <br />
+<strong>Date Completed:</strong> 2022-09-17<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> A basic messaging app. Effectively a prerequisite for tcp_message_sender_and_receiver. Use Flask to send a string from one endpoint (host:port pair) to another Python script.<br />
 <strong>Result:</strong> You can now send and receive a TCP or UDP message between a server (receiver) and client (sender). You can run the code in the terminal by running:<br>
