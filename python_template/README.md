@@ -18,4 +18,3 @@ Last update: 2022-09-15 22:04
 
 <h2>Notes</h2>
 You can recreate this template using: <br /><i>cookiecutter ~/Documents/python_projects/python_template</i><br />Whilst you are inside the file that you want your new project.
-bitches
