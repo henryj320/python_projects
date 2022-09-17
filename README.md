@@ -76,10 +76,6 @@ Last update: 2022-09-16 00:07
 <strong>Language:</strong> HTML/Javascript<br />
 <strong>Overview:</strong> website go brr.<br /><br />
 
-<strong>Title:</strong> basic_messaging <br />
-<strong>Language:</strong> Python<br />
-<strong>Overview:</strong> A basic messaging app. Effectively a prerequisite for tcp_message_sender_and_receiver. Use Flask to send a string from one endpoint (host:port pair) to another Python script.<br /><br />
-
 
 <br />
 <h2>Completed Project Ideas</h2>
@@ -98,4 +94,13 @@ Last update: 2022-09-16 00:07
 <strong>Result:</strong> I now have a cookiecutter template up and running for future Python projects. You can call the cookiecutter template by downloading it to your machine and running:<br>
 <i>cd... </i><br />
 <i>cookiecutter ~/Documents/python_projects/python_template</i>
+<br /><br />
+
+<strong>Title:</strong> basic_messaging <br />
+<strong>Language:</strong> Python<br />
+<strong>Overview:</strong> A basic messaging app. Effectively a prerequisite for tcp_message_sender_and_receiver. Use Flask to send a string from one endpoint (host:port pair) to another Python script.<br />
+<strong>Result:</strong> You can now send and receive a TCP or UDP message between a server (receiver) and client (sender). You can run the code in the terminal by running:<br>
+Terminal 1: <i>python receiver.py udp</i><br />
+Terminal 2: <i>python sender.py udp</i><br />
+You may need to update the host and port.
 <br /><br />
