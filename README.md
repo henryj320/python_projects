@@ -44,37 +44,38 @@ Last update: 2022-09-16 00:07
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> Write a program that sends and receives message from the basics. Generate a TCP segment with all of the fields in binary. Set up a port to send on and a port to receive on. Use your Java code as a reference. Importantly, the receiver needs to be listening on the port. Use datasubs to find how to run an app on a certain portand listen to requests. Set out the plan logically.<br /><br />
 
-<strong>Title:</strong> height_determination_software <br />
-<strong>Language:</strong> not a clue <br />
+<strong>Title:</strong> height_determination_software<br />
+<strong>Language:</strong> Not a clue<br />
 <strong>Overview:</strong> Use vanishing points to determine the height of individuals or objects inside photos. (Fspy)<br /><br />
 
-<strong>Title:</strong> blender_addon_forensic_tool <br />
-<strong>Language:</strong> python <br />
-<strong>Overview:</strong> Creating simulations, blah, blah, blah. <br /><br />
+<strong>Title:</strong> blender_addon_forensic_tool<br />
+<strong>Language:</strong> Python <br />
+<strong>Overview:</strong> Creating simulations, blah, blah, blah.<br /><br />
 
-<strong>Title:</strong> computer_writing_tool_thing <br />
-<strong>Language:</strong> not a clue <br />
-<strong>Overview:</strong> Piece of software that analyses text, categorises words into groups (verbs, nouns, prepositions, etc.) and uses preset knowledge on sentence structures to write sentences/more. <br /><br />
+<strong>Title:</strong> computer_writing_tool<br />
+<strong>Language:</strong> Not a clue<br />
+<strong>Overview:</strong> Piece of software that analyses text, categorises words into groups (verbs, nouns, prepositions, etc.) and uses preset knowledge on sentence structures to write sentences/more.<br /><br />
 
-<strong>Title:</strong> dnd_map_precedural_gen_tool <br />
-<strong>Language:</strong> not a clue <br />
+<strong>Title:</strong> dnd_map_precedural_gen_tool<br />
+<strong>Language:</strong> Not a clue <br />
 <strong>Overview:</strong> Precedurally generates tools in different settings for use by DMs and GMs in TTRPG campaigns. Different settings can be changed to tweak results. <br /><br />
 
 <strong>Title:</strong> text_to_music <br />
 <strong>Language:</strong> not a clue <br />
-<strong>Overview:</strong> Converts text to music based on a formula. Including tone reading through negativity/positivity of words in sentence, (minor/major). https://www.youtube.com/watch?v=PVT6WpOyf0s&feature=youtu.be <br /><br />
+<strong>Overview:</strong> Converts text to music based on a formula. Including tone reading through negativity/positivity of words in sentence, (minor/major). https://www.youtube.com/watch?v=PVT6WpOyf0s&feature=youtu.be<br /><br />
 
 <strong>Title:</strong> precedurally_generated_evolution_of_civilisation <br />
-<strong>Language:</strong> not a clue <br />
-<strong>Overview:</strong> Tweak parameters as the civilisation and planet evolves to create stats and planet image. <br /><br />
+<strong>Language:</strong> Not a clue<br />
+<strong>Overview:</strong> Tweak parameters as the civilisation and planet evolves to create stats and planet image.<br /><br />
 
 <strong>Title:</strong> dnd_fun_tool <br />
-<strong>Language:</strong> not a clue <br />
-<strong>Overview:</strong> Keep track of characters, better combat system, better image display system, better tools for DM. <br /><br />
+<strong>Language:</strong> Not a clue <br />
+<strong>Overview:</strong> Keep track of characters, better combat system, better image display system, better tools for DM.<br /><br />
 
 <strong>Title:</strong> Free_Worlds_website <br />
-<strong>Language:</strong> HTML/Javascript <br />
-<strong>Overview:</strong> website go brr. <br /><br />
+<strong>Language:</strong> HTML/Javascript<br />
+<strong>Overview:</strong> website go brr.<br /><br />
+
 
 <br />
 <h2>Completed Project Ideas</h2>
@@ -93,4 +94,13 @@ Last update: 2022-09-16 00:07
 <strong>Result:</strong> I now have a cookiecutter template up and running for future Python projects. You can call the cookiecutter template by downloading it to your machine and running:<br>
 <i>cd... </i><br />
 <i>cookiecutter ~/Documents/python_projects/python_template</i>
+<br /><br />
+
+<strong>Title:</strong> basic_messaging <br />
+<strong>Language:</strong> Python<br />
+<strong>Overview:</strong> A basic messaging app. Effectively a prerequisite for tcp_message_sender_and_receiver. Use Flask to send a string from one endpoint (host:port pair) to another Python script.<br />
+<strong>Result:</strong> You can now send and receive a TCP or UDP message between a server (receiver) and client (sender). You can run the code in the terminal by running:<br>
+Terminal 1: <i>python receiver.py udp</i><br />
+Terminal 2: <i>python sender.py udp</i><br />
+You may need to update the host and port.
 <br /><br />
