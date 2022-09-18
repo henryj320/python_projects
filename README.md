@@ -12,10 +12,6 @@ Last update: 2022-09-18 16:33
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> Shows a progress bar for your weekly goals. For example, a progress bar on how close to your reading goal you are. You could also autorun this on startup and set your background to the progress bars by screenshotting and setting as the wallpaper. It could also show how much of your 7.5 * 5 hrs of work you've done so far. You could run this via Flask. This would make it so that you can use Python (storing values in .txt files) and a clean webpage with Bootstrap. Alternatively, you could use React for clean elements and running.<br /><br />
 
-<strong>Title:</strong> total_screentime<br />
-<strong>Language:</strong> Android<br />
-<strong>Overview:</strong> Records the screentime you have across all your devices, not just your mobile phone. May require some database or message sending between devices.<br /><br />
-
 <strong>Title:</strong> wifi_users_tracker<br />
 <strong>Language:</strong> Linux Script<br />
 <strong>Overview:</strong> A software which states when a new device joins your WiFi network via a notification. It could be extended to show when a device disconnects. Previous implementation of this used a for loop to read the nmap's "x devices found" string.<br /><br />
@@ -31,10 +27,6 @@ Last update: 2022-09-18 16:33
 <strong>Title:</strong> centre_country_shower<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> Shows the centre of a given country based on different factors: geological, average age, population, etc. This would show age densities, etc.<br /><br />
-
-<strong>Title:</strong> treasure_find<br />
-<strong>Language:</strong> Android<br />
-<strong>Overview:</strong> A fun running game. Places x items in a random location within y metres. The user "picks them up" when within 10 metres. Run ends when the last has been picked up. Show the locations at the end.<br /><br />
 
 <strong>Title:</strong> running_route_generator<br />
 <strong>Language:</strong> Python<br />
