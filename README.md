@@ -10,7 +10,7 @@ Last update: 2022-09-16 00:07
 
 <strong>Title:</strong> weekly_goals_GUI<br />
 <strong>Language:</strong> Python<br />
-<strong>Overview:</strong> Shows a progress bar for your weekly goals. For example, a progress bar on how close to your reading goal you are. You could also autorun this on startup and set your background to the progress bars by screenshotting and setting as the wallpaper. It could also show how much of your 7.5 * 5 hrs of work you've done so far. You could run this via Flask. This would make it so that you can use Python (storing values in .txt files)and a clean webpage with Bootstrap. Alternatively, you could use React for clean elements and running.<br /><br />
+<strong>Overview:</strong> Shows a progress bar for your weekly goals. For example, a progress bar on how close to your reading goal you are. You could also autorun this on startup and set your background to the progress bars by screenshotting and setting as the wallpaper. It could also show how much of your 7.5 * 5 hrs of work you've done so far. You could run this via Flask. This would make it so that you can use Python (storing values in .txt files) and a clean webpage with Bootstrap. Alternatively, you could use React for clean elements and running.<br /><br />
 
 <strong>Title:</strong> total_screentime<br />
 <strong>Language:</strong> Android<br />
