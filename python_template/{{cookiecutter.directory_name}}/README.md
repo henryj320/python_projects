@@ -1,5 +1,5 @@
 # python_template
-Last update: 2022-09-15 22:04
+Last update: {{cookiecutter.last_update}}
 <br /><br />
 <h2>{{cookiecutter.directory_name}}</h2>
 

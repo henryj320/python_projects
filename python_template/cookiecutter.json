@@ -7,5 +7,6 @@
     "author_email": "henryj320@gmail.com",
     "directory_name": "{{ cookiecutter.project_name}}",
     "basic_file_name": "basic_file",
-    "greeting_recipient": "Henry"
+    "greeting_recipient": "Henry",
+    "last_update": "{% now 'local', '%Y/%m/%d %H:%M' %}"
 }
