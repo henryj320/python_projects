@@ -52,7 +52,7 @@ Last update: 2022-09-18 16:33
 <strong>Language:</strong> Not a clue <br />
 <strong>Overview:</strong> Precedurally generates tools in different settings for use by DMs and GMs in TTRPG campaigns. Different settings can be changed to tweak results. <br /><br />
 
-<strong>Title:</strong> text_to_music <br />
+<strong>Title:</strong> text_to_music<br />
 <strong>Language:</strong> not a clue <br />
 <strong>Overview:</strong> Converts text to music based on a formula. Including tone reading through negativity/positivity of words in sentence, (minor/major). https://www.youtube.com/watch?v=PVT6WpOyf0s&feature=youtu.be<br /><br />
 
@@ -60,17 +60,21 @@ Last update: 2022-09-18 16:33
 <strong>Language:</strong> Not a clue<br />
 <strong>Overview:</strong> Tweak parameters as the civilisation and planet evolves to create stats and planet image.<br /><br />
 
-<strong>Title:</strong> dnd_fun_tool <br />
+<strong>Title:</strong> dnd_fun_tool<br />
 <strong>Language:</strong> Not a clue <br />
 <strong>Overview:</strong> Keep track of characters, better combat system, better image display system, better tools for DM.<br /><br />
 
-<strong>Title:</strong> Free_Worlds_website <br />
+<strong>Title:</strong> Free_Worlds_website<br />
 <strong>Language:</strong> HTML/Javascript<br />
 <strong>Overview:</strong> website go brr.<br /><br />
 
-<strong>Title:</strong> full_system_search <br />
+<strong>Title:</strong> full_system_search<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> Similar to DocumentSystem to Git. Make a program that takes a searchterm and searches the entire computer for any documents named or containing the term. Make it show sections at a time with a progress bar to learn Python progress bars in the terminal. Add a parameter for OS so that OS files can be ignored. Output should be something like "Found: X occurrences of "example" in Documents, Y occurences of "example" in Pictures.<br /><br />
+
+<strong>Title:</strong> missed_muscles<br />
+<strong>Language:</strong> Python<br />
+<strong>Overview:</strong> Input which exercises you completed this week. The system outputs which of the main muscles you missed this week and what exercises you could do to train them.<br /><br />
 
 
 <br />
@@ -93,7 +97,7 @@ Last update: 2022-09-18 16:33
 <i>cookiecutter ~/Documents/python_projects/python_template</i>
 <br /><br />
 
-<strong>Title:</strong> basic_messaging <br />
+<strong>Title:</strong> basic_messaging<br />
 <strong>Date Completed:</strong> 2022-09-17<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> A basic messaging app. Effectively a prerequisite for tcp_message_sender_and_receiver. Use Flask to send a string from one endpoint (host:port pair) to another Python script.<br />
