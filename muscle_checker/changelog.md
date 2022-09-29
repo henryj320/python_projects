@@ -7,4 +7,13 @@ Last update: 2022/09/29 20:31
         <li>Created the project and README.</li>
         <li>Wrote all_muscles.json to contain all exercises.</li>
         <li>Used a JSON Validator to check the formatting.</li>
+        <li>Created dataclasses for Group and Muscles.</li>
+        <li>Added a function to read from all_muscles.json.</li>
+        <li>Updated setup.py.</li>
+        <li>Got tox working.</li>
+        <ul>
+                <li>Create a virtual environment - "python3 -m venv venv".</li>
+                <li>Activate it - ". venv/bin/activate". You can deactivate it with "deactivate".</li>
+                <li>pycodestyle "\" doesn't seem to be working. Just ignoring it.</li>
+        </ul>
 </ol>
