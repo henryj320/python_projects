@@ -1,0 +1,171 @@
+{
+    "groups": [
+        "push",
+        "pull",
+        "legs"
+    ],
+
+    "muscles": [
+        {
+            "name": "Pecs",
+            "exercises": [
+                "Bench Press",
+                "Incline BP",
+                "Incline Bench Press",
+                "Decline BP",
+                "Decline Bench Press",
+                "BP Smith Machine",
+                "Incline BP Smith Machine",
+                "Incline Bench Press Smith Machine",
+                "Decline BP Smith Machine",
+                "Decline Bench Press Smith Machine",
+                "Dumbbell Chest Flys",
+                "Chest Flys",
+                "Machine Chest Flys",
+                "Chest Dips",
+                "Tricep Dips"
+            ]
+        },
+        {
+            "name": "Triceps",
+            "exercises": [
+                "CG Bench Press",
+                "Close Grip Bench Press",
+                "Skullcrushers",
+                "Tricep Dips",
+                "Chest Dips",
+                "Tricep Machine Dips",
+                "Tricep Pull-Downs",
+                "Tricep Pushdowns",
+                "Rope Pushdowns",
+                "Tricep Overhead Extensions",
+                "Trice OtHL",
+                "Close-Grip Bench Press"
+            ]
+        },
+        {
+            "name": "Front Deltoids",
+            "exercises": [
+                "Front Shoulder Raises",
+                "Landmine Press",
+                "Barbell Shoulder Press",
+                "Shoulder Press Machine"
+            ]
+        },
+        {
+            "name": "Side Deltoids",
+            "exercises": [
+                "Side Shoulder Raises",
+                "Side Lateral Raises",
+                "Barbell Upright Row",
+                "Dumbbel Military Press"
+            ]
+        },
+        {
+            "name": "Rear Deltoids",
+            "exercises": [
+                "Rear Delt Machine",
+                "Bent-Over Row",
+                "Dumbbell W-Raises",
+                "W-Raises"
+            ]
+        },
+        {
+            "name": "Biceps",
+            "exercises": [
+                "EZ Bar Curls",
+                "Cable Curls",
+                "Barbell Curls",
+                "CG Barbell Curls",
+                "WG Barbell Curls",
+                "Hammer Curls",
+                "Concentration Curls",
+                "Conc. Curls",
+                "Chin-Ups"
+            ]
+        },
+        {
+            "name": "Lats",
+            "exercises": [
+                "Deadlifts",
+                "Barbell Rows",
+                "Pull-Ups",
+                "Chin-Ups",
+                "Lat Pull-Downs"
+            ]
+        },
+        {
+            "name": "Traps (Trapezius)",
+            "exercises": [
+                "Shrugs",
+                "Barbell Shrugs",
+                "Deadlifts"
+            ]
+        },
+        {
+            "name": "General Back",
+            "exercises": [
+                "Deadlifts",
+                "Landmine Rows",
+                "T-Bar Rows"
+            ]
+        },
+        {
+            "name": "Glutes",
+            "exercises": [
+                "Squats",
+                "Back Squats",
+                "Deadlifts",
+                "Lunges",
+                "Reverse Lunges",
+                "Leg Press Machine",
+                "Angled Leg Press"
+            ]
+        },
+        {
+            "name": "Quads",
+            "exercises": [
+                "Squats",
+                "Front Squads",
+                "Deadlifts",
+                "Lunges",
+                "Reverse Lunges",
+                "Leg Press Machine",
+                "Angled Leg Press",
+                "Leg Extension Machine",
+                "Leg Extensions Machine",
+                "Leg Extensions"
+            ]
+        },
+        {
+            "name": "Hamstrings",
+            "exercises": [
+                "Squats",
+                "Back Squats",
+                "Lunges",
+                "Reverse Lunges",
+                "Leg Press Machine",
+                "Angled Leg Press",
+                "Prone Leg Curls",
+                "Leg Curl Machine",
+                "Leg Curls"
+            ]
+        },
+        {
+            "name": "Calves",
+            "exercises": [
+                "Deadlifts",
+                "Prone Leg Curls",
+                "Leg Curl Machine",
+                "Leg Curls"
+            ]
+        },
+        {
+            "name": "Abs",
+            "exercises": [
+                "Abs",
+                "Obliques"
+            ]
+        }
+    ]
+}

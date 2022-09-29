@@ -72,7 +72,7 @@ Last update: 2022-09-18 16:33
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> Similar to DocumentSystem to Git. Make a program that takes a searchterm and searches the entire computer for any documents named or containing the term. Make it show sections at a time with a progress bar to learn Python progress bars in the terminal. Add a parameter for OS so that OS files can be ignored. Output should be something like "Found: X occurrences of "example" in Documents, Y occurences of "example" in Pictures.<br /><br />
 
-<strong>Title:</strong> missed_muscles<br />
+<strong>Title:</strong> muscle_checker<br />
 <strong>Language:</strong> Python<br />
 <strong>Overview:</strong> Input which exercises you completed this week. The system outputs which of the main muscles you missed this week and what exercises you could do to train them.<br /><br />
 
