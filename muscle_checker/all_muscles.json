@@ -119,7 +119,9 @@
                 "Lunges",
                 "Reverse Lunges",
                 "Leg Press Machine",
-                "Angled Leg Press"
+                "Angled Leg Press",
+                "Run",
+                "Ran"
             ]
         },
         {
@@ -134,7 +136,9 @@
                 "Angled Leg Press",
                 "Leg Extension Machine",
                 "Leg Extensions Machine",
-                "Leg Extensions"
+                "Leg Extensions",
+                "Run",
+                "Ran"
             ]
         },
         {
@@ -148,7 +152,9 @@
                 "Angled Leg Press",
                 "Prone Leg Curls",
                 "Leg Curl Machine",
-                "Leg Curls"
+                "Leg Curls",
+                "Run",
+                "Ran"
             ]
         },
         {
