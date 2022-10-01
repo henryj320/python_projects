@@ -5,7 +5,6 @@ from dataclasses import dataclass, fields
 from typing import Dict, List
 import json
 
-# load_dotenv()  # Allows you to reference env variables with os.environ.get()
 
 @dataclass
 class Group:
@@ -18,8 +17,6 @@ class Muscle:
     """Dataclass to hold Muscle:Exercises"""
     name: str
     exercises: List
-
-# print(os.environ.get("USE_ENVS"))
 
 
 def json_file_to_dict(file: str) -> dict:
@@ -64,7 +61,6 @@ def read_exercises_from_text_file(file: str) -> list:
     return exercises
 
 
-
 def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_muscles: list, hit_exercises: list) -> dict:
     """Takes a list of exercises and converts it into JSON, calculating the group and reformatting it.
 
@@ -76,7 +72,6 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
     Returns:
         json: A JSON object of the exercises.
     """
-
     hit_muscle_exercises = []  # [ ["Pecs", ["Bench Press", ...]], ["Triceps", ["Tricep Pull-Downs", ...]] ]
     muscle_count = 0
     for muscle in all_muscles:  # For each muscle.
@@ -111,7 +106,6 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
     for group in all_groups:  # For each group in all_groups (Push, Pull, Legs, Misc).
 
         # for hit_muscles in hit_muscle_exercises:  
-
         for muscle in group["muscles"]:
             if hit_muscle_exercises[0][0] == muscle:
                 session_group = group["name"]  # Sets the session_group to the correct group name and breaks out of the loops.
@@ -120,11 +114,6 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
                 break
 
         break
-
-        # break
-
-    # print(hit_muscle_exercises)
-    # json_string = f"{ 'session_number': {session_number}}"
 
     muscles_json_format = []
     for muscle in hit_muscle_exercises:
@@ -135,10 +124,6 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
             }
         )
 
-    # muscles_json_format = [{"name": "pecs",
-    # "exercises": ["Bench Press"]
-    # }]
-
     # Creating a dictionary
     session_details_dict = {
         "session_number": session_number,
@@ -146,30 +131,11 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
         "muscles": muscles_json_format
     }
 
-    # print(type(session_details_dict))
-
     return session_details_dict
-
-    
-
-    # return json.dumps(JSON_Dictionary, indent=4)
-    # return json.loads(JSON_Dictionary) Didnt work
-    # return json.JSONEncoder().encode(JSON_Dictionary)
-
-
-    print(session_group)
-    return hit_muscle_exercises
-
-    print("")
-    print(all_muscles[0]["name"])
-
-    print("")
-    print("")
-    print(hit_muscle_exercises)
 
 
 def find_missed_muscles(group: str, hit_muscles: list, all_groups: list):
-    # energy_values = [x[0]['energy'] for x in features]
+
     missed_muscles = []
 
     correct_group = -1
@@ -179,12 +145,15 @@ def find_missed_muscles(group: str, hit_muscles: list, all_groups: list):
             correct_group = count
         count = count + 1
 
-    # print(all_groups[correct_group])
-    # print(correct_group)
-
 
     for muscle in all_groups[correct_group]["muscles"]:  # Adds all muscles for that group to missed_muscles.
         missed_muscles.append(muscle)
+
+    print("152")
+    print(hit_muscles)
+
+    for muscle in hit_muscles:  # For each of the muscles hit in the gym session.
+        if muscle["name"] in missed_muscles: missed_muscles.remove(muscle["name"])  # Remove that muscle from missed_muscles.
     
 
     print("++++")
@@ -200,16 +169,9 @@ def find_missed_muscles(group: str, hit_muscles: list, all_groups: list):
 all_muscles = json_file_to_dict('all_muscles.json')
 all_groups = all_muscles["groups"]  # Contains name:[muscles] pairs.
 all_muscles = all_muscles["muscles"]  # Contains name:[exercises] pairs.
-# print(all_groups)
-# print(all_muscles[0])
-
-# group = all_muscles["groups"]
-# print(group)
 
 hit_exercises = read_exercises_from_text_file('insert_calendar_text.txt')
-
 hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
-
 find_missed_muscles = find_missed_muscles(hit_muscle_exercises["group"], hit_muscle_exercises["muscles"], all_groups)
 
 
@@ -220,6 +182,3 @@ print("------------")
 # print(type(hit_muscle_exercises))
 print(all_groups)
 print("")
-print("")
-# print(all_muscles)
-# print(hit_muscle_exercises["session_number"])
