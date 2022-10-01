@@ -16,4 +16,7 @@ Last update: 2022/09/29 20:31
                 <li>Activate it - ". venv/bin/activate". You can deactivate it with "deactivate".</li>
                 <li>pycodestyle "\" doesn't seem to be working. Just ignoring it.</li>
         </ul>
+        <li>Creates groups and muscles dicts to store all_muscles.</li>
+        <li>Wrote the read_exercises_from_text_file function.</li>
+        <li>Wrote the convert_exercises_list_to_json function.</li>
 </ol>
