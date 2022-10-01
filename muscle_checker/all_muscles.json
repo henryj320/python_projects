@@ -1,8 +1,37 @@
 {
     "groups": [
-        "push",
-        "pull",
-        "legs"
+        {
+            "name": "Push",
+            "muscles": [
+                "Pecs",
+                "Triceps",
+                "Front Deltoids",
+                "Side Deltoids",
+                "Rear Deltoids"
+            ]
+        },
+        {
+            "name": "Pull",
+            "muscles": [
+                "Biceps",
+                "Lats",
+                "Traps (Trapezius)",
+                "General Back"
+            ]
+        },
+        {
+            "name": "Legs",
+            "muscles": [
+                "Glutes",
+                "Quads",
+                "Hamstrings",
+                "Calves"
+            ]
+        },
+        {
+            "name": "Misc",
+            "muscles": ["Abs"]
+        }
     ],
 
     "muscles": [
@@ -90,6 +119,8 @@
                 "Deadlifts",
                 "Barbell Rows",
                 "Pull-Ups",
+                "Hanging Half Pull Ups",
+                "Hanging Half Pull-Ups",
                 "Chin-Ups",
                 "Lat Pull-Downs"
             ]
