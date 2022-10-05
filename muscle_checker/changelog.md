@@ -18,5 +18,9 @@ Last update: 2022/09/29 20:31
         </ul>
         <li>Creates groups and muscles dicts to store all_muscles.</li>
         <li>Wrote the read_exercises_from_text_file function.</li>
-        <li>Wrote the convert_exercises_list_to_json function.</li>
+        <li>Wrote the convert_exercises_list_to_dict function.</li>
+        <li>Started on find_missed_muscles.</li>
+        <li>Wrote suggested_exercises function.</li>
+        <li>Added a main method.</li>
+        <li>Added a way to take a parameter of the calendar file location. Run the script with: "python muscle_checker.py".</li>
 </ol>

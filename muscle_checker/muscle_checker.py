@@ -1,11 +1,10 @@
-"""A basic Python script to check that everything is working."""
-import os
-# from dotenv import load_dotenv
+"""A python script to state which muscles have been missed given calendar text."""
+import argparse
 from dataclasses import dataclass, fields
 from typing import Dict, List
 import json
+# from dotenv import load_dotenv
 
-# load_dotenv()  # Allows you to reference env variables with os.environ.get()
 
 @dataclass
 class Group:
@@ -18,8 +17,6 @@ class Muscle:
     """Dataclass to hold Muscle:Exercises"""
     name: str
     exercises: List
-
-# print(os.environ.get("USE_ENVS"))
 
 
 def json_file_to_dict(file: str) -> dict:
@@ -64,8 +61,7 @@ def read_exercises_from_text_file(file: str) -> list:
     return exercises
 
 
-
-def convert_exercises_list_to_json(session_number: int, all_groups: list, all_muscles: list, hit_exercises: list) -> json:
+def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_muscles: list, hit_exercises: list) -> dict:
     """Takes a list of exercises and converts it into JSON, calculating the group and reformatting it.
 
     Args:
@@ -76,7 +72,6 @@ def convert_exercises_list_to_json(session_number: int, all_groups: list, all_mu
     Returns:
         json: A JSON object of the exercises.
     """
-
     hit_muscle_exercises = []  # [ ["Pecs", ["Bench Press", ...]], ["Triceps", ["Tricep Pull-Downs", ...]] ]
     muscle_count = 0
     for muscle in all_muscles:  # For each muscle.
@@ -111,7 +106,6 @@ def convert_exercises_list_to_json(session_number: int, all_groups: list, all_mu
     for group in all_groups:  # For each group in all_groups (Push, Pull, Legs, Misc).
 
         # for hit_muscles in hit_muscle_exercises:  
-
         for muscle in group["muscles"]:
             if hit_muscle_exercises[0][0] == muscle:
                 session_group = group["name"]  # Sets the session_group to the correct group name and breaks out of the loops.
@@ -120,11 +114,6 @@ def convert_exercises_list_to_json(session_number: int, all_groups: list, all_mu
                 break
 
         break
-
-        # break
-
-    print(hit_muscle_exercises)
-    # json_string = f"{ 'session_number': {session_number}}"
 
     muscles_json_format = []
     for muscle in hit_muscle_exercises:
@@ -135,47 +124,69 @@ def convert_exercises_list_to_json(session_number: int, all_groups: list, all_mu
             }
         )
 
-    # muscles_json_format = [{"name": "pecs",
-    # "exercises": ["Bench Press"]
-    # }]
-
     # Creating a dictionary
-    JSON_Dictionary = {
+    session_details_dict = {
         "session_number": session_number,
         "group": session_group,
         "muscles": muscles_json_format
     }
 
-    return json.dumps(JSON_Dictionary)
+    return session_details_dict
 
 
-    print(session_group)
-    return hit_muscle_exercises
+def find_missed_muscles(group: str, hit_muscles: list, all_groups: list) -> list:
 
-    print("")
-    print(all_muscles[0]["name"])
+    missed_muscles = []
 
-    print("")
-    print("")
-    print(hit_muscle_exercises)
+    correct_group = -1
+    count = 0
+    for curr_group in all_groups:  # Finds which group in all_groups was hit in the gym session.
+        if curr_group["name"] == group:
+            correct_group = count
+        count = count + 1
 
+    for muscle in all_groups[correct_group]["muscles"]:  # Adds all muscles for that group to missed_muscles.
+        missed_muscles.append(muscle)
 
+    for muscle in hit_muscles:  # For each of the muscles hit in the gym session.
+        if muscle["name"] in missed_muscles: missed_muscles.remove(muscle["name"])  # Remove that muscle from missed_muscles.
 
-all_muscles = json_file_to_dict('all_muscles.json')
-all_groups = all_muscles["groups"]  # Contains name:[muscles] pairs.
-all_muscles = all_muscles["muscles"]  # Contains name:[exercises] pairs.
-# print(all_groups)
-# print(all_muscles[0])
+    return missed_muscles
 
-# group = all_muscles["groups"]
-# print(group)
+def suggested_exercises(all_muscles: str, missed_muscle: str) -> str:
 
-hit_exercises = read_exercises_from_text_file('insert_calendar_text.txt')
+    if missed_muscle == "":
+        return ""
 
+    suggested_exercises = f"You didn't train your {missed_muscle}.\nTo train this, you could perform: "
+    for curr_muscle in all_muscles:
+        if curr_muscle["name"] == missed_muscle:
+            for muscle in curr_muscle["exercises"]:
+                if muscle == curr_muscle["exercises"][len(curr_muscle["exercises"]) -1]:
+                    suggested_exercises = suggested_exercises[0:len(suggested_exercises)-2]
+                    suggested_exercises += f" or {muscle}.\n"
+                else:
+                    suggested_exercises += f"{muscle}, "
 
+    return suggested_exercises
+            
+    print(all_muscles[0]["exercises"])
 
+    # Add a check if the same exercise comes twice
 
-hit_muscle_exercises = convert_exercises_list_to_json(1, all_groups, all_muscles, hit_exercises)
+if __name__ == "__main__":  # Default method to run.
 
-# print(all_groups)
-print(hit_muscle_exercises)
+    parser = argparse.ArgumentParser(description="A python script to state which muscles have been missed given calendar text.")  # Allows parsing arguments to the file.
+    parser.add_argument("-f", "--set_calendar_file", help="Sets the location of insert_calendar_text.txt.", default="insert_calendar_text.txt", type=str)
+    args = parser.parse_args()
+
+    all_muscles = json_file_to_dict('all_muscles.json')
+    all_groups = all_muscles["groups"]  # Contains name:[muscles] pairs.
+    all_muscles = all_muscles["muscles"]  # Contains name:[exercises] pairs.
+
+    hit_exercises = read_exercises_from_text_file(args.set_calendar_file)
+    hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
+    missed_muscles = find_missed_muscles(hit_muscle_exercises["group"], hit_muscle_exercises["muscles"], all_groups)
+    
+    for muscles in missed_muscles:
+        print(suggested_exercises(all_muscles, muscles))
