@@ -1,9 +1,9 @@
-"""A basic Python script to check that everything is working."""
-import os
-# from dotenv import load_dotenv
+"""A python script to state which muscles have been missed given calendar text."""
+import argparse
 from dataclasses import dataclass, fields
 from typing import Dict, List
 import json
+# from dotenv import load_dotenv
 
 
 @dataclass
@@ -134,7 +134,7 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
     return session_details_dict
 
 
-def find_missed_muscles(group: str, hit_muscles: list, all_groups: list):
+def find_missed_muscles(group: str, hit_muscles: list, all_groups: list) -> list:
 
     missed_muscles = []
 
@@ -145,40 +145,48 @@ def find_missed_muscles(group: str, hit_muscles: list, all_groups: list):
             correct_group = count
         count = count + 1
 
-
     for muscle in all_groups[correct_group]["muscles"]:  # Adds all muscles for that group to missed_muscles.
         missed_muscles.append(muscle)
 
-    print("152")
-    print(hit_muscles)
-
     for muscle in hit_muscles:  # For each of the muscles hit in the gym session.
         if muscle["name"] in missed_muscles: missed_muscles.remove(muscle["name"])  # Remove that muscle from missed_muscles.
+
+    return missed_muscles
+
+def suggested_exercises(all_muscles: str, missed_muscle: str) -> str:
+
+    if missed_muscle == "":
+        return ""
+
+    suggested_exercises = f"You didn't train your {missed_muscle}.\nTo train this, you could perform: "
+    for curr_muscle in all_muscles:
+        if curr_muscle["name"] == missed_muscle:
+            for muscle in curr_muscle["exercises"]:
+                if muscle == curr_muscle["exercises"][len(curr_muscle["exercises"]) -1]:
+                    suggested_exercises = suggested_exercises[0:len(suggested_exercises)-2]
+                    suggested_exercises += f" or {muscle}.\n"
+                else:
+                    suggested_exercises += f"{muscle}, "
+
+    return suggested_exercises
+            
+    print(all_muscles[0]["exercises"])
+
+    # Add a check if the same exercise comes twice
+
+if __name__ == "__main__":  # Default method to run.
+
+    parser = argparse.ArgumentParser(description="A python script to state which muscles have been missed given calendar text.")  # Allows parsing arguments to the file.
+    parser.add_argument("-f", "--set_calendar_file", help="Sets the location of insert_calendar_text.txt.", default="insert_calendar_text.txt", type=str)
+    args = parser.parse_args()
+
+    all_muscles = json_file_to_dict('all_muscles.json')
+    all_groups = all_muscles["groups"]  # Contains name:[muscles] pairs.
+    all_muscles = all_muscles["muscles"]  # Contains name:[exercises] pairs.
+
+    hit_exercises = read_exercises_from_text_file(args.set_calendar_file)
+    hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
+    missed_muscles = find_missed_muscles(hit_muscle_exercises["group"], hit_muscle_exercises["muscles"], all_groups)
     
-
-    print("++++")
-    # print(all_muscles[0]["name"])
-    print(missed_muscles)
-    print("++++")
-
-    # Given the group, remove each muscle hit from missed_muscles
-    return ""
-
-
-
-all_muscles = json_file_to_dict('all_muscles.json')
-all_groups = all_muscles["groups"]  # Contains name:[muscles] pairs.
-all_muscles = all_muscles["muscles"]  # Contains name:[exercises] pairs.
-
-hit_exercises = read_exercises_from_text_file('insert_calendar_text.txt')
-hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
-find_missed_muscles = find_missed_muscles(hit_muscle_exercises["group"], hit_muscle_exercises["muscles"], all_groups)
-
-
-# print(all_groups)
-# print(hit_muscle_exercises)
-print("------------")
-
-# print(type(hit_muscle_exercises))
-print(all_groups)
-print("")
+    for muscles in missed_muscles:
+        print(suggested_exercises(all_muscles, muscles))
