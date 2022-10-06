@@ -50,4 +50,4 @@ jobs:
           cd muscle_checker
           python3 -m pip install --upgrade pip
           pip install tox tox-gh-actions
-          muscle_checker/tox
+          tox
