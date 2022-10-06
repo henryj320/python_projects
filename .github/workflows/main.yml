@@ -49,7 +49,7 @@ jobs:  # A workflow can have one or more jobs. They can be run sequentially or i
           pip install tox tox-gh-actions
           tox -e tests
 
-      -name: Run [testenv:styling]
+      -id: Run [testenv:styling]
         uses: andymckay/pycodestyle-action@0.1.3
         run: |
           cd muscle_checker
