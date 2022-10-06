@@ -38,15 +38,8 @@ jobs:
           echo test, and deploy your project.
           
       - uses: jitterbit/get-changed-files@v1
-        with:
-          # Format of the steps output context.
-          # Can be 'space-delimited', 'csv', or 'json'.
-          # Default: 'space-delimited'
-          format: 'space-delimited'
-          
       - id: files
-        uses: jitterbit/get-changed-files@v1
       - run: |
           for changed_file in ${{ steps.files.outputs.all }}; do
-          echo "Do something with this ${changed_file}."
+          echo "${changed_file} has been changed."
           done
