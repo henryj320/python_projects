@@ -36,10 +36,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
-      - uses: jitterbit/get-changed-files@v1
       - id: files
+        uses: jitterbit/get-changed-files@v1
       - run: |
           for changed_file in ${{ steps.files.outputs.all }}; do
-          echo "${changed_file} has been changed."
+          echo "Do something with this ${changed_file}."
           done
