@@ -28,7 +28,7 @@ jobs:  # A workflow can have one or more jobs. They can be run sequentially or i
         run: echo Hello, world!  # Runs a single command using the runners shell.
         
 
-      - id: files  # Prints which file has changed.
+      - name: Return changed files  # Prints which file has changed.
         uses: jitterbit/get-changed-files@v1
       - run: |
           for changed_file in ${{ steps.files.outputs.all }}; do
@@ -48,11 +48,3 @@ jobs:  # A workflow can have one or more jobs. They can be run sequentially or i
           python3 -m pip install --upgrade pip
           pip install tox tox-gh-actions
           tox -e tests
-
-      -id: Run [testenv:styling]
-        uses: andymckay/pycodestyle-action@0.1.3
-        run: |
-          cd muscle_checker
-          python3 -m pip install --upgrade pip
-          pip install tox tox-gh-actions
-          tox -e styling
