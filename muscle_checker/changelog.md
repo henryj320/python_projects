@@ -32,6 +32,5 @@ Last update: 2022/09/29 20:31
                 <li>"tox -e lint" to run [testenv:lint].</li>
                 <li>"tox -e test" to run [testenv:tests].</li>
         </ul>
-        test
         
 </ol>

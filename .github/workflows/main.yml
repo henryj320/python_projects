@@ -24,13 +24,9 @@ jobs:  # A workflow can have one or more jobs. They can be run sequentially or i
 
       - uses: actions/checkout@v3  # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
 
-      - name: Run a one-line script
-        run: echo Hello, world!  # Runs a single command using the runners shell.
-        
-
       - name: Return changed files  # Prints which file has changed.
         uses: jitterbit/get-changed-files@v1
-      - run: echo steps.files.outputs.all
+      - run: echo ${{steps.files.outputs.all}}
 
       - name: Run [testenv:lint]
         run: |
