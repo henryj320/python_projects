@@ -25,5 +25,12 @@ Last update: 2022/09/29 20:31
         <li>Added a way to take a parameter of the calendar file location. Run the script with: "python muscle_checker.py".</li>
         <li>Added a GitLab action to learn how to do it using this <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions" target="_blank">guide</a>.</li>
         <li>Made a new .github/workflows folder to hold workflows (actions) and made a Action that runs when muscle_checker changes.</li>
+        <li>Added linting to tox.ini. Run commands:</li>
+        <ul>
+                <li>conda activate .venv/venv/activate</li>
+                <li>"tox" to run [testenv].</li>
+                <li>"tox -e lint" to run [testenv:lint].</li>
+                <li>"tox -e test" to run [testenv:tests].</li>
+        </ul>
         
 </ol>
