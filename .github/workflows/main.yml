@@ -44,3 +44,9 @@ jobs:
           for changed_file in ${{ steps.files.outputs.all }}; do
           echo "Do something with this ${changed_file}."
           done
+
+      - name: Testing with tox
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install tox tox-gh-actions
+          tox
