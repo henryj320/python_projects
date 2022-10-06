@@ -33,5 +33,6 @@ Last update: 2022/09/29 20:31
                 <li>"tox -e test" to run [testenv:tests].</li>
         </ul>
         <li>Finalised muscle_checker_action.yml. Only issue is that it doesn't fail if there are pycodestyle or pydocstyle issues.</li>
+        <li>Tested with a MR.</li>
         
 </ol>
