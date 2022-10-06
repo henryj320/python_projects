@@ -26,7 +26,6 @@ jobs:  # A workflow can have one or more jobs. They can be run sequentially or i
 
       - name: Return changed files  # Prints which file has changed.
         uses: jitterbit/get-changed-files@v1
-      - run: echo ${{steps.files.outputs.all}}
 
       - name: Run [testenv:lint]
         run: |
