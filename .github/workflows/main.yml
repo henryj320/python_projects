@@ -48,5 +48,5 @@ jobs:
       - name: Testing with tox
         run: |
           python3 -m pip install --upgrade pip
-          pip install tox tox-gh-actions
-          tox
+          pip install muscle_checker/tox tox-gh-actions
+          muscle_checker/tox
