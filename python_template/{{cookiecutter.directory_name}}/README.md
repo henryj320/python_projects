@@ -1,12 +1,13 @@
 # python_template
 Last update: {{cookiecutter.last_update}}
-<br /><br />
-<h2>{{cookiecutter.directory_name}}</h2>
+<br><br>
 
-<strong>Title:</strong> {{cookiecutter.directory_name}}<br />
-<strong>Language:</strong> Python<br />
-<strong>Overview:</strong> {{cookiecutter.description}}<br /><br />
+## {{cookiecutter.directory_name}}
 
-View the <a href="changelog.md">changelog.md</a> here.
+**Title**: {{cookiecutter.directory_name}}
 
-<br /><br />
+**Language**: Python
+
+**Overview**: {{cookiecutter.description}}
+
+View the [changelog](changelog.md) here.
