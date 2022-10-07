@@ -8,22 +8,18 @@ import json
 
 @dataclass
 class Group:
-    """Dataclass to hold the Group:Muscles.."""
-
+    """Dataclass to hold the Group:Muscles."""
 
     name: str
     muscles: List
 
 
-
 @dataclass
 class Muscle:
-    """Dataclass to hold Muscle:Exercises.."""
-
+    """Dataclass to hold Muscle:Exercises."""
 
     name: str
     exercises: List
-
 
 
 def json_file_to_dict(file: str) -> dict:
