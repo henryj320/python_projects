@@ -1,38 +1,32 @@
 # muscle_checker
-Last update: 2022/09/29 20:31
-<br /><br />
-<h2>Changelog for muscle_checker</h2>
+Last update: 2022/10/07 12:20
+<br><br>
 
-<ol>
-        <li>Created the project and README.</li>
-        <li>Wrote all_muscles.json to contain all exercises.</li>
-        <li>Used a JSON Validator to check the formatting.</li>
-        <li>Created dataclasses for Group and Muscles.</li>
-        <li>Added a function to read from all_muscles.json.</li>
-        <li>Updated setup.py.</li>
-        <li>Got tox working.</li>
-        <ul>
-                <li>Create a virtual environment - "python3 -m venv venv".</li>
-                <li>Activate it - ". venv/bin/activate". You can deactivate it with "deactivate".</li>
-                <li>pycodestyle "\" doesn't seem to be working. Just ignoring it.</li>
-        </ul>
-        <li>Creates groups and muscles dicts to store all_muscles.</li>
-        <li>Wrote the read_exercises_from_text_file function.</li>
-        <li>Wrote the convert_exercises_list_to_dict function.</li>
-        <li>Started on find_missed_muscles.</li>
-        <li>Wrote suggested_exercises function.</li>
-        <li>Added a main method.</li>
-        <li>Added a way to take a parameter of the calendar file location. Run the script with: "python muscle_checker.py".</li>
-        <li>Added a GitLab action to learn how to do it using this <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions" target="_blank">guide</a>.</li>
-        <li>Made a new .github/workflows folder to hold workflows (actions) and made a Action that runs when muscle_checker changes.</li>
-        <li>Added linting to tox.ini. Run commands:</li>
-        <ul>
-                <li>conda activate .venv/venv/activate</li>
-                <li>"tox" to run [testenv].</li>
-                <li>"tox -e lint" to run [testenv:lint].</li>
-                <li>"tox -e test" to run [testenv:tests].</li>
-        </ul>
-        <li>Finalised muscle_checker_action.yml. Only issue is that it doesn't fail if there are pycodestyle or pydocstyle issues.</li>
-        <li>Tested with a MR.</li>
-        
-</ol>
+## Changelog for muscle_checker
+
+1. Created the project and README.
+2. Wrote all_muscles.json to contain all exercises.
+3. Used a JSON Validator to check the formatting.
+4. Created dataclasses for Group and Muscles.
+5. Added a function to read from all_muscles.json.
+6. Updated setup.py.
+7. Got tox working.
+    - Create a virtual environment - "python3 -m venv venv".
+    - Activate it - ". venv/bin/activate". You can deactivate it with "deactivate".
+    - pycodestyle "\" doesn't seem to be working. Just ignoring it.
+8. Creates groups and muscles dicts to store all_muscles.
+9. Wrote the read_exercises_from_text_file function.
+10. Wrote the convert_exercises_list_to_dict function.
+11. Started on find_missed_muscles.
+12. Wrote suggested_exercises function.
+13. Added a main method.
+14. Added a way to take a parameter of the calendar file location. Run the script with: "python muscle_checker.py".
+15. Added a GitLab action to learn how to do it using this <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions" target="_blank">guide</a>.
+16. Made a new .github/workflows folder to hold workflows (actions) and made a Action that runs when muscle_checker changes.
+17. Added linting to tox.ini. Run commands:
+    - conda activate .venv/venv/activate
+    - "tox" to run [testenv].
+    - "tox -e lint" to run [testenv:lint].
+    - "tox -e test" to run [testenv:tests].
+18. Finalised muscle_checker_action.yml. Only issue is that it doesn't fail if there are pycodestyle or pydocstyle issues.
+19. Tested with a MR.
