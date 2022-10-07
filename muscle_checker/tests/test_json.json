@@ -4,7 +4,17 @@
             "name": "Push",
             "muscles": [
                 "Pecs",
-                "Triceps"
+                "Triceps",
+                "Front Deltoids"
+            ]
+        },
+        {
+            "name": "Legs",
+            "muscles": [
+                "Glutes",
+                "Quads",
+                "Hamstrings",
+                "Calves"
             ]
         }
     ],
@@ -20,8 +30,21 @@
         {
             "name": "Triceps",
             "exercises": [
-                "CG Bench Press",
+                "Tricep Pull-Downs",
                 "Close Grip Bench Press"
+            ]
+        },
+        {
+            "name": "Front Deltoids",
+            "exercises": [
+                "Front Shoulder Raises"
+            ]
+        },
+        {
+            "name": "Quads",
+            "exercises": [
+                "Squats",
+                "Leg Press"
             ]
         }
     ]
