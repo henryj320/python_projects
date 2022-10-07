@@ -104,18 +104,23 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
 
         muscle_count = muscle_count + 1
 
-    session_group = "Uknown"
+    session_groups = []
     for group in all_groups:  # For each group in all_groups (Push, Pull, Legs, Misc).
 
         # for hit_muscles in hit_muscle_exercises:
         for muscle in group["muscles"]:
-            if hit_muscle_exercises[0][0] == muscle:
-                session_group = group["name"]  # Sets the session_group to the correct group name and breaks out of the loops.
+
+            for hit_muscle in hit_muscle_exercises:  # For each hit muscle - Pecs, Triceps, etc.
+                if hit_muscle[0] == muscle:  # If the first exercise that hits that muscle is muscle.
+                    if group["name"] not in session_groups:
+                        session_groups.append(group["name"])  # Adds the group to the groups hit in the session.
+
+            # if hit_muscle_exercises[0][0] == muscle:
+            #     print(muscle + " - " + group["name"])
+            #     session_groups.append(group["name"])  # Sets the session_group to the correct group name and breaks out of the loops.
                 # TODO: This will find the wrong group if you start a session with Abs.
 
-                break
 
-        break
 
     muscles_json_format = []
     for muscle in hit_muscle_exercises:
@@ -129,14 +134,14 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
     # Creating a dictionary
     session_details_dict = {
         "session_number": session_number,
-        "group": session_group,
+        "groups": session_groups,
         "muscles": muscles_json_format
     }
 
     return session_details_dict
 
 
-def find_missed_muscles(group: str, hit_muscles: list, all_groups: list) -> list:
+def find_missed_muscles(groups: list, hit_muscles: list, all_groups: list) -> list:
     """Given the muscles hit, return a list of muscles missed for the group.
 
     Args:
@@ -148,20 +153,21 @@ def find_missed_muscles(group: str, hit_muscles: list, all_groups: list) -> list
         list: A list containing all of the muscles missed for a given group.
     """
     missed_muscles = []
+    for group in groups:
 
-    correct_group = -1
-    count = 0
-    for curr_group in all_groups:  # Finds which group in all_groups was hit in the gym session.
-        if curr_group["name"] == group:
-            correct_group = count
-        count = count + 1
+        correct_group = -1
+        count = 0
+        for curr_group in all_groups:  # Finds which group in all_groups was hit in the gym session.
+            if curr_group["name"] == group:
+                correct_group = count
+            count = count + 1
 
-    for muscle in all_groups[correct_group]["muscles"]:  # Adds all muscles for that group to missed_muscles.
-        missed_muscles.append(muscle)
+        for muscle in all_groups[correct_group]["muscles"]:  # Adds all muscles for that group to missed_muscles.
+            missed_muscles.append(muscle)
 
-    for muscle in hit_muscles:  # For each of the muscles hit in the gym session.
-        if muscle["name"] in missed_muscles:
-            missed_muscles.remove(muscle["name"])  # Remove that muscle from missed_muscles.
+        for muscle in hit_muscles:  # For each of the muscles hit in the gym session.
+            if muscle["name"] in missed_muscles:
+                missed_muscles.remove(muscle["name"])  # Remove that muscle from missed_muscles.
 
     return missed_muscles
 
@@ -215,8 +221,28 @@ if __name__ == "__main__":  # Default method to run.
 
     hit_exercises = read_exercises_from_text_file(args.file)
     hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
-    missed_muscles = find_missed_muscles(hit_muscle_exercises["group"], hit_muscle_exercises["muscles"], all_groups)
+    missed_muscles = find_missed_muscles(hit_muscle_exercises["groups"], hit_muscle_exercises["muscles"], all_groups)
+    
+    hit_muscles = []
+    for muscle in hit_muscle_exercises["muscles"]:
+        hit_muscles.append(muscle["name"])
 
-    print("")
+    all_groups_names = []
+    for group in all_groups:  # Adds all groups to a list
+        all_groups_names.append(group["name"])
+
+    missed_groups = all_groups_names.copy()
+    for group in all_groups_names:  # Removes from the list so only the missed groups are left
+        if group in hit_muscle_exercises["groups"]:
+            missed_groups.remove(group)
+
+    print("\nResults:\n")
+    print(f"Muscle Groups Hit: {hit_muscle_exercises['groups']}")
+    print(f"Muscle Groups Missed: {missed_groups}")
+    print(f"Muscles Hit: {hit_muscles}")
+    # for group in hit_muscle_exercises["groups"]
+
+    print("\n+-------------------------------------------------------------------+\n")
     for muscles in missed_muscles:
         print(suggested_exercises(all_muscles, muscles))
+    print("+-------------------------------------------------------------------+")
