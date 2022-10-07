@@ -22,7 +22,6 @@ class Muscle:
     exercises: List
 
 
-
 def json_file_to_dict(file: str) -> dict:
     """Take the location of the JSON file and return the JSON.
 
