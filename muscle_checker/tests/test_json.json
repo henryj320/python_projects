@@ -1,0 +1,30 @@
+{
+    "groups": [
+        {
+            "name": "Push",
+            "muscles": [
+                "Pecs",
+                "Triceps"
+            ]
+        }
+    ],
+
+    "muscles": [
+        {
+            "name": "Pecs",
+            "exercises": [
+                "Bench Press",
+                "Incline BP",
+                "Incline Bench Press"
+            ]
+        },
+        {
+            "name": "Triceps",
+            "exercises": [
+                "CG Bench Press",
+                "Close Grip Bench Press",
+                "Skullcrushers"
+            ]
+        }
+    ]
+}
