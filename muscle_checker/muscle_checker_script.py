@@ -8,19 +8,23 @@ import json
 
 @dataclass
 class Group:
-    """Dataclass to hold the Group:Muscles"""
+    """Dataclass to hold the Group:Muscles."""
+
     name: str
     muscles: List
 
+
 @dataclass
 class Muscle:
-    """Dataclass to hold Muscle:Exercises"""
+    """Dataclass to hold Muscle:Exercises."""
+
     name: str
     exercises: List
 
 
+
 def json_file_to_dict(file: str) -> dict:
-    """Takes the location of the JSON file and returns the JSON.
+    """Take the location of the JSON file and return the JSON.
 
     Args:
         file (str): The location of the JSON file.
@@ -33,7 +37,7 @@ def json_file_to_dict(file: str) -> dict:
 
 
 def read_exercises_from_text_file(file: str) -> list:
-    """Reads the exercises inside of file and converts it into a Python list.
+    """Read the exercises inside of file and convert it into a Python list.
 
     Args:
         file (str): The location of the JSON file.
@@ -62,7 +66,7 @@ def read_exercises_from_text_file(file: str) -> list:
 
 
 def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_muscles: list, hit_exercises: list) -> dict:
-    """Takes a list of exercises and converts it into JSON, calculating the group and reformatting it.
+    """Take a list of exercises and convert it into JSON, calculating the group and reformatting it.
 
     Args:
         all_groups (list): A list containing all groups.
@@ -77,7 +81,7 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
     for muscle in all_muscles:  # For each muscle.
 
         for exercise in muscle["exercises"]:  # For each exercise.
-        
+
             for hit_exercise in hit_exercises:  # For each of the exercises hit.
 
                 if hit_exercise == exercise:
@@ -94,18 +98,17 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
 
                         muscle_exercise_pair_count = muscle_exercise_pair_count + 1
 
-
                     if muscle_location == -1:  # If the muscle is not already in hit_muscle_exercises.
                         hit_muscle_exercises.append([hit_muscle, [hit_exercise]])
                     else:  # If the muscle is already in hit_muscle_exercises.
                         hit_muscle_exercises[muscle_location][1].append(hit_exercise)
 
         muscle_count = muscle_count + 1
-    
+
     session_group = "Uknown"
     for group in all_groups:  # For each group in all_groups (Push, Pull, Legs, Misc).
 
-        # for hit_muscles in hit_muscle_exercises:  
+        # for hit_muscles in hit_muscle_exercises:
         for muscle in group["muscles"]:
             if hit_muscle_exercises[0][0] == muscle:
                 session_group = group["name"]  # Sets the session_group to the correct group name and breaks out of the loops.
@@ -135,7 +138,16 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
 
 
 def find_missed_muscles(group: str, hit_muscles: list, all_groups: list) -> list:
+    """Given the muscles hit, return a list of muscles missed for the group.
 
+    Args:
+        group (str): The muscle group that the hit_muscles are in.
+        hit_muscles (list): A list of the muscles hit in the session.
+        all_groups (list): Contains all groups, muscles and exercises.
+
+    Returns:
+        list: A list containing all of the muscles missed for a given group.
+    """
     missed_muscles = []
 
     correct_group = -1
@@ -149,30 +161,47 @@ def find_missed_muscles(group: str, hit_muscles: list, all_groups: list) -> list
         missed_muscles.append(muscle)
 
     for muscle in hit_muscles:  # For each of the muscles hit in the gym session.
-        if muscle["name"] in missed_muscles: missed_muscles.remove(muscle["name"])  # Remove that muscle from missed_muscles.
+        if muscle["name"] in missed_muscles:
+            missed_muscles.remove(muscle["name"])  # Remove that muscle from missed_muscles.
 
     return missed_muscles
 
-def suggested_exercises(all_muscles: str, missed_muscle: str) -> str:
 
+def suggested_exercises(all_muscles: str, missed_muscle: str) -> str:
+    """Return a string containing all of the exercises you could do to hit the missed muscle.
+
+    Args:
+        all_muscles (list): A list containing all muscles and associated exercises.
+        missed_muscle (str): The muscle missed.
+
+    Returns:
+        str: A string stating which muscle was missed and what exercises to do.
+    """
     if missed_muscle == "":
         return ""
 
     suggested_exercises = f"You didn't train your {missed_muscle}.\nTo train this, you could perform: "
     for curr_muscle in all_muscles:
+
         if curr_muscle["name"] == missed_muscle:
+
             for muscle in curr_muscle["exercises"]:
-                if muscle == curr_muscle["exercises"][len(curr_muscle["exercises"]) -1]:
-                    suggested_exercises = suggested_exercises[0:len(suggested_exercises)-2]
+
+                if muscle == curr_muscle["exercises"][len(curr_muscle["exercises"]) - 1]:
+
+                    suggested_exercises = suggested_exercises[0:len(suggested_exercises) - 2]
                     suggested_exercises += f" or {muscle}.\n"
+
                 else:
+
                     suggested_exercises += f"{muscle}, "
 
     return suggested_exercises
-            
+
     print(all_muscles[0]["exercises"])
 
     # Add a check if the same exercise comes twice
+
 
 if __name__ == "__main__":  # Default method to run.
 
@@ -188,7 +217,7 @@ if __name__ == "__main__":  # Default method to run.
     hit_exercises = read_exercises_from_text_file(args.file)
     hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
     missed_muscles = find_missed_muscles(hit_muscle_exercises["group"], hit_muscle_exercises["muscles"], all_groups)
-    
+
     print("")
     for muscles in missed_muscles:
         print(suggested_exercises(all_muscles, muscles))

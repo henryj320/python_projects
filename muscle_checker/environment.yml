@@ -1,0 +1,8 @@
+# Created to hold which libraries are required for venv/bin/activate virtual environment.
+
+dependencies:
+  - pip
+  - pip:
+    - setuptools
+    - tox
+    - tox-gh-actions

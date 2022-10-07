@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.103" timestamp="2022-10-07T18:48:43.504148" hostname="Henry-Ideapad-Ubuntu"><testcase classname="" name="test_muscle_checker_script" time="0.000"><error message="collection failure">test_muscle_checker_script.py:24: in &lt;module&gt;
+    test_json_file_to_dict()
+test_muscle_checker_script.py:21: in test_json_file_to_dict
+    assert len(result) == 0  # Checks that the result is not empty.
+E   AssertionError: assert 2 == 0
+E    +  where 2 = len({'groups': [{'muscles': ['Pecs', 'Triceps'], 'name': 'Push'}], 'muscles': [{'exercises': ['Bench Press', 'Incline BP'], 'name': 'Pecs'}, {'exercises': ['CG Bench Press', 'Close Grip Bench Press'], 'name': 'Triceps'}]})</error></testcase></testsuite></testsuites>

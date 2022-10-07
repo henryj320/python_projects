@@ -30,3 +30,6 @@ Last update: 2022/10/07 12:20
     - "tox -e test" to run [testenv:tests].
 18. Finalised muscle_checker_action.yml. Only issue is that it doesn't fail if there are pycodestyle or pydocstyle issues.
 19. Tested with a MR.
+20. Cleaned up the changelog.
+21. Fixed all the pycodestyle and pydocstyle errors.
+22. Started the test_muscle_checker.py tests.
