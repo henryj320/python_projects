@@ -1,5 +1,4 @@
 """Tests for muscle_checker."""
-from unittest.mock import Mock
 from muscle_checker_script import *
 
 MOCK_JSON_DATA = {
