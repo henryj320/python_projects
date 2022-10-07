@@ -23,7 +23,6 @@ MOCK_HIT_MUSCLES = [
 ]
 
 
-
 def test_json_file_to_dict():
     """Test method for muscle_checker_script.json_file_to_dict()."""
     file = "tests/test_json.json"
@@ -52,23 +51,22 @@ def test_convert_exercises_list_to_dict():
     all_muscles = all_muscles["muscles"]
 
     result = convert_exercises_list_to_dict(1, all_groups, all_muscles, MOCK_CALENDAR_LIST)
-
     assert isinstance(result, dict)  # Checks that the result is a dict.
     assert len(result["muscles"]) == 3  # Checks that all 3 muscles are picked up (Pecs, Triceps, Quads).
-    assert result["group"] == "Push"  # Checks the group has automatically been picked up as "Push"
+    assert result["groups"] == ["Push", "Legs"]  # Checks the group has automatically been picked up as "Push"
     assert len(result) == 3  # Checks that result contains "session_number", "group" and "muscles"
 
 
 def test_find_missed_muscles():
     """Test method for muscle_checker_script.find_missed_muscles()."""
-    group = "Push"
+    groups = ["Push", "Legs"]
     all_muscles = json_file_to_dict("tests/test_json.json")
     all_groups = all_muscles["groups"]
 
-    result = find_missed_muscles(group, MOCK_HIT_MUSCLES, all_groups)
+    result = find_missed_muscles(groups, MOCK_HIT_MUSCLES, all_groups)
 
     assert isinstance(result, list)  # Checks that the result is a list.
-    assert result == ["Front Deltoids"]  # Checks that the result only contains "Front Deltoids".
+    assert result == ["Front Deltoids", "Glutes", "Hamstrings", "Calves"]  # Checks that the result only contains "Front Deltoids".
 
 
 def test_suggested_exercises():
@@ -78,12 +76,11 @@ def test_suggested_exercises():
     missed_muscle = "Front Deltoids"
 
     result = suggested_exercises(all_muscles, missed_muscle)
-    
+
     assert result == "You didn't train your Front Deltoids.\nTo train this, you could perform or Front Shoulder Raises.\n"
 
 
-
-# This block makes it so that you can run the tests with "python3 test_muscle_checker_script.py"
+# This block makes it so that you can run the tests with "python3 test_muscle_checker_script.py".
 test_json_file_to_dict()
 test_read_exercises_from_text_file()
 test_convert_exercises_list_to_dict()

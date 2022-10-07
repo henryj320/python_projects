@@ -1,5 +1,5 @@
 # muscle_checker
-Last update: 2022/10/07 12:20
+Last update: 2022/10/07 23:30
 <br><br>
 
 ## Changelog for muscle_checker
@@ -27,9 +27,11 @@ Last update: 2022/10/07 12:20
     - conda activate .venv/venv/activate
     - "tox" to run [testenv].
     - "tox -e lint" to run [testenv:lint].
-    - "tox -e test" to run [testenv:tests].
+    - "tox -e tests" to run [testenv:tests].
 18. Finalised muscle_checker_action.yml. Only issue is that it doesn't fail if there are pycodestyle or pydocstyle issues.
 19. Tested with a MR.
 20. Cleaned up the changelog.
 21. Fixed all the pycodestyle and pydocstyle errors.
 22. Started the test_muscle_checker.py tests.
+23. Finished all of the tests. Run then with "tox -e tests".
+24. Worked on allowing several groups in one exercise list.
