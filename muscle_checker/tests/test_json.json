@@ -14,16 +14,14 @@
             "name": "Pecs",
             "exercises": [
                 "Bench Press",
-                "Incline BP",
-                "Incline Bench Press"
+                "Incline BP"
             ]
         },
         {
             "name": "Triceps",
             "exercises": [
                 "CG Bench Press",
-                "Close Grip Bench Press",
-                "Skullcrushers"
+                "Close Grip Bench Press"
             ]
         }
     ]
