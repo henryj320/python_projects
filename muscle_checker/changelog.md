@@ -1,5 +1,5 @@
 # muscle_checker
-Last update: 2022/10/07 23:30
+Last update: 2022/10/08 16:30
 <br><br>
 
 ## Changelog for muscle_checker
@@ -44,3 +44,6 @@ Last update: 2022/10/07 23:30
 27. Added content passed from python.
 28. Moved the script runner into a run() method that can be used by app.py.
 29. Made a web UI that prints the results with a preset location for the file.
+30. Added an input form for the user to insert their workout.
+31. Updated the script to take a string instead of a .txt file.
+32. Fully working!

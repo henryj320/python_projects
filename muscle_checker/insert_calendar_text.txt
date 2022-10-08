@@ -1,1 +1,5 @@
 Skullcrushers:
+Abs:
+Leg Press:
+Bench Press:
+Uphill Treadmill Walk:
