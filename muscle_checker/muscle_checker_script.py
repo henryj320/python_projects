@@ -201,7 +201,15 @@ def suggested_exercises(all_muscles: str, missed_muscle: str) -> str:
     # Add a check if the same exercise comes twice
 
 
-def run(file: str):
+def run(file: str) -> dict:
+    """Run the file. Fires off all of the functions and outputs a dict.
+
+    Args:
+        file (str): Location of insert_calendar_text.txt.
+
+    Returns:
+        dict: results_dict containing all of the details of the results.
+    """
     all_muscles = json_file_to_dict('all_muscles.json')
     all_groups = all_muscles["groups"]  # Contains name:[muscles] pairs.
     all_muscles = all_muscles["muscles"]  # Contains name:[exercises] pairs.
@@ -209,9 +217,6 @@ def run(file: str):
     hit_exercises = read_exercises_from_text_file(file)
     hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
     missed_muscles = find_missed_muscles(hit_muscle_exercises["groups"], hit_muscle_exercises["muscles"], all_groups)
-
-
-
 
     hit_muscles = []
     for muscle in hit_muscle_exercises["muscles"]:
@@ -238,9 +243,21 @@ def run(file: str):
         "hit_muscles": hit_muscles,
         "suggestions": suggested_exercises_for_missed_muscles
     }
-    
 
     return results_dict
+
+
+def run_string(string: str):
+    """Run the run() method, first overwriting insert_calendar_text.txt with the content of the string argument.
+
+    Args:
+        string (str): The calendar text to get the results from.
+    """
+    f = open("insert_calendar_text.txt", "w")  # Opens the file to be overwritten ("w").
+    f.write(string)
+    f.close()
+
+    return run("insert_calendar_text.txt")
 
 
 if __name__ == "__main__":  # Default method to run.
@@ -251,3 +268,5 @@ if __name__ == "__main__":  # Default method to run.
     args = parser.parse_args()
 
     print(run(args.file))
+
+    # run_string("hello")

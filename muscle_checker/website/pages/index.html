@@ -3,13 +3,17 @@
     <head>
         <link rel="stylesheet" href='website/master.css' />
         <link rel="stylesheet" href='../master.css' />
+        <link rel="stylesheet" href='../website/master.css' />
     </head>
     <body>
         <h1>Muscle Checker</h1>
         <div id="main_content">
             <div>
                 <h2>Input text</h2>
-                <p>Example text</p>
+                <form action="{{ url_for('index')}}" method="post">
+                    <textarea id="text_input" name="text_input" rows="4" cols="50">Insert your calendar text here.</textarea>
+                    <button id="text_submit" type="submit">Submit</button>
+                </form>
             </div>
             <div>
                 <h2>Results</h2>
