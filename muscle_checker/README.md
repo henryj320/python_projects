@@ -12,7 +12,7 @@ Last update: 2022/10/08 18:18
 - "cd mudcle_checker"
 - ". venv/bin/activate"
 - "flask run --host=0.0.0.0"
-- 
+
 The website contains two ways of generating the output - updating the .txt file or by inputting to the website.
 
 View the [changelog](changelog.md) here.
