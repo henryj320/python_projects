@@ -3,5 +3,4 @@
 *.egg-info
 */.env
 *venv
-__pycache__/
-*/insert_calendar_text.txt
+*__pycache__
