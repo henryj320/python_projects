@@ -35,3 +35,10 @@ Last update: 2022/10/07 23:30
 22. Started the test_muscle_checker.py tests.
 23. Finished all of the tests. Run then with "tox -e tests".
 24. Worked on allowing several groups in one exercise list.
+25. Started on the front-end app. 
+    - Made app.py
+    - Imports muscle_checker_script
+    - Run it with " . venv/bin/activate"
+    - "flask run --host=0.0.0.0"
+26. Added an index.html and master.css.
+27. Added content passed from python.

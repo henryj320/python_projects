@@ -115,13 +115,6 @@ def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_mu
                     if group["name"] not in session_groups:
                         session_groups.append(group["name"])  # Adds the group to the groups hit in the session.
 
-            # if hit_muscle_exercises[0][0] == muscle:
-            #     print(muscle + " - " + group["name"])
-            #     session_groups.append(group["name"])  # Sets the session_group to the correct group name and breaks out of the loops.
-                # TODO: This will find the wrong group if you start a session with Abs.
-
-
-
     muscles_json_format = []
     for muscle in hit_muscle_exercises:
         muscles_json_format.append(
@@ -222,7 +215,7 @@ if __name__ == "__main__":  # Default method to run.
     hit_exercises = read_exercises_from_text_file(args.file)
     hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
     missed_muscles = find_missed_muscles(hit_muscle_exercises["groups"], hit_muscle_exercises["muscles"], all_groups)
-    
+
     hit_muscles = []
     for muscle in hit_muscle_exercises["muscles"]:
         hit_muscles.append(muscle["name"])
@@ -240,7 +233,6 @@ if __name__ == "__main__":  # Default method to run.
     print(f"Muscle Groups Hit: {hit_muscle_exercises['groups']}")
     print(f"Muscle Groups Missed: {missed_groups}")
     print(f"Muscles Hit: {hit_muscles}")
-    # for group in hit_muscle_exercises["groups"]
 
     print("\n+-------------------------------------------------------------------+\n")
     for muscles in missed_muscles:
