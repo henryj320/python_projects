@@ -210,9 +210,6 @@ def run(file: str):
     hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
     missed_muscles = find_missed_muscles(hit_muscle_exercises["groups"], hit_muscle_exercises["muscles"], all_groups)
 
-
-
-
     hit_muscles = []
     for muscle in hit_muscle_exercises["muscles"]:
         hit_muscles.append(muscle["name"])
@@ -239,8 +236,15 @@ def run(file: str):
         "suggestions": suggested_exercises_for_missed_muscles
     }
     
-
     return results_dict
+
+
+def run_string(string: str):
+    f = open("insert_calendar_text.txt", "w")  # Opens the file to be overwritten ("w"). 
+    f.write(string)
+    f.close()
+
+    return(run("insert_calendar_text.txt"))
 
 
 if __name__ == "__main__":  # Default method to run.
@@ -251,3 +255,5 @@ if __name__ == "__main__":  # Default method to run.
     args = parser.parse_args()
 
     print(run(args.file))
+
+    # run_string("hello")

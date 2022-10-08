@@ -64,5 +64,21 @@ p {
 
 #main_content div * {
     padding: 2%;
+}
 
+#text_input {
+    width: 91.5%;
+    margin: 0;
+    padding: 0;
+    margin: 2%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#text_submit {
+    margin: 2%;
+    margin-top: 0;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: #96989b;
 }
