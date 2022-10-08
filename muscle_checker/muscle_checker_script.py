@@ -201,20 +201,17 @@ def suggested_exercises(all_muscles: str, missed_muscle: str) -> str:
     # Add a check if the same exercise comes twice
 
 
-if __name__ == "__main__":  # Default method to run.
-
-    parser = argparse.ArgumentParser(description="A python script to state which muscles have been missed given calendar text.")  # Allows parsing arguments to the file.
-    # parser.add_argument("-f", "--set_calendar_file", help="Sets the location of insert_calendar_text.txt.", default="insert_calendar_text.txt", type=str)
-    parser.add_argument("-f", "--file", help="Sets the location of insert_calendar_text.txt.", default="insert_calendar_text.txt", type=str)
-    args = parser.parse_args()
-
+def run(file: str):
     all_muscles = json_file_to_dict('all_muscles.json')
     all_groups = all_muscles["groups"]  # Contains name:[muscles] pairs.
     all_muscles = all_muscles["muscles"]  # Contains name:[exercises] pairs.
 
-    hit_exercises = read_exercises_from_text_file(args.file)
+    hit_exercises = read_exercises_from_text_file(file)
     hit_muscle_exercises = convert_exercises_list_to_dict(1, all_groups, all_muscles, hit_exercises)
     missed_muscles = find_missed_muscles(hit_muscle_exercises["groups"], hit_muscle_exercises["muscles"], all_groups)
+
+
+
 
     hit_muscles = []
     for muscle in hit_muscle_exercises["muscles"]:
@@ -229,12 +226,28 @@ if __name__ == "__main__":  # Default method to run.
         if group in hit_muscle_exercises["groups"]:
             missed_groups.remove(group)
 
-    print("\nResults:\n")
-    print(f"Muscle Groups Hit: {hit_muscle_exercises['groups']}")
-    print(f"Muscle Groups Missed: {missed_groups}")
-    print(f"Muscles Hit: {hit_muscles}")
+    suggested_exercises_for_missed_muscles = []
 
-    print("\n+-------------------------------------------------------------------+\n")
     for muscles in missed_muscles:
-        print(suggested_exercises(all_muscles, muscles))
-    print("+-------------------------------------------------------------------+")
+        suggested_exercises_for_missed_muscles.append((suggested_exercises(all_muscles, muscles)))
+
+    # Creating a dictionary
+    results_dict = {
+        "hit_muscle_groups": hit_muscle_exercises['groups'],
+        "missed_muscle_groups": missed_groups,
+        "hit_muscles": hit_muscles,
+        "suggestions": suggested_exercises_for_missed_muscles
+    }
+    
+
+    return results_dict
+
+
+if __name__ == "__main__":  # Default method to run.
+
+    parser = argparse.ArgumentParser(description="A python script to state which muscles have been missed given calendar text.")  # Allows parsing arguments to the file.
+    # parser.add_argument("-f", "--set_calendar_file", help="Sets the location of insert_calendar_text.txt.", default="insert_calendar_text.txt", type=str)
+    parser.add_argument("-f", "--file", help="Sets the location of insert_calendar_text.txt.", default="insert_calendar_text.txt", type=str)
+    args = parser.parse_args()
+
+    print(run(args.file))

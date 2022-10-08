@@ -5,8 +5,34 @@
         <link rel="stylesheet" href='../master.css' />
     </head>
     <body>
-        <h1>Flask Template tutorial</h1>
-        <p>Integrating HTML, CSS and Javascript in Flask Web Framework</p>
-        <p>{{ details }}</p>
+        <h1>Muscle Checker</h1>
+        <div id="main_content">
+            <div>
+                <h2>Input text</h2>
+                <p>Example text</p>
+            </div>
+            <div>
+                <h2>Results</h2>
+                <p>Hit Muscle Groups:
+                    {% for group in results_dict["hit_muscle_groups"] %}
+                        {{group}}
+                    {% endfor %}
+                </p>
+                <p>Missed Muscle Groups:
+                    {% for group in results_dict["missed_muscle_groups"] %}
+                        {{group}}
+                    {% endfor %}
+                </p>
+                <p>Hit Muscles:
+                    {% for muscle in results_dict["hit_muscles"] %}
+                        {{muscle}}
+                    {% endfor %}
+                </p>
+
+                {% for suggestion in results_dict["suggestions"] %}
+                    <p>{{suggestion}}</p>
+                {% endfor %}
+            </div>
+        </div>
     </body>
 </html>

@@ -42,3 +42,5 @@ Last update: 2022/10/07 23:30
     - "flask run --host=0.0.0.0"
 26. Added an index.html and master.css.
 27. Added content passed from python.
+28. Moved the script runner into a run() method that can be used by app.py.
+29. Made a web UI that prints the results with a preset location for the file.
