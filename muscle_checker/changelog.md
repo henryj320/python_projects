@@ -47,4 +47,5 @@ Last update: 2022/10/08 16:30
 30. Added an input form for the user to insert their workout.
 31. Updated the script to take a string instead of a .txt file.
 32. Fully working!
-33. Removed unnecessary folders and added to .gitignore.
+33. Removed unnecessary folders and added to .gitignore. Fixed the pycache files being added to pushes.
+34. Cleaned up the README.

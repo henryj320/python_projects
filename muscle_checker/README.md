@@ -19,5 +19,3 @@ In order to run my muscle_checker project, follow these steps:
 6. Go to "127.0.0.1:5000".
 
 View the [changelog](changelog.md) here.
-
-
