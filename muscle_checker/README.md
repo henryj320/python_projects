@@ -1,5 +1,5 @@
 # muscle_checker
-Last update: 2022/10/08 18:18
+Last update: 2022-10-08 18:18
 <br><br>
 
 ## muscle_checker
