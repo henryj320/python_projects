@@ -1,6 +1,6 @@
 # {{cookiecutter.project_name}}
 Last update: {{cookiecutter.last_update}}
-<br /><br />
+<br><br>
 
 ## Changelog for {{cookiecutter.project_name}}
 

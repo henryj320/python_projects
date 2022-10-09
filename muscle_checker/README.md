@@ -6,7 +6,7 @@ Last update: 2022/10/08 18:18
 
 **Title**: muscle_checker
 
-**Language**:Python
+**Language**: Python
 
 **Overview**: Input which exercises you completed this week. The system outputs which of the main muscles you missed this week and what exercises you could do to train them. This output is via a Flask website. The website contains two ways of generating the output - updating the .txt file or by inputting to the website.
 
