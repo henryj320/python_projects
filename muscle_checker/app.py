@@ -42,7 +42,17 @@ def index():
         return render_template('index.html', results_dict=results_dict, hit_muscle_groups=hit_muscle_groups, missed_muscle_groups=missed_muscle_groups, hit_muscles=hit_muscles)
     return render_template('index.html', results_dict=results_dict, hit_muscle_groups=hit_muscle_groups, missed_muscle_groups=missed_muscle_groups, hit_muscles=hit_muscles)
 
-def stringify(index: str, dictionary: dict) -> dict:
+
+def stringify(index: str, dictionary: dict) -> str:
+    """Attain a clean stringified list given a dictionary and index.
+
+    Args:
+        index (str): The key for the dictionary.
+        dictionary (dict): The dictionary itself.
+
+    Returns:
+        str: The stringified list.
+    """
     result = ""
     for item in dictionary[index]:
         result += item
