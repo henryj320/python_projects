@@ -1,5 +1,5 @@
 # **python_projects**
-Last update: 2022/10/07 12:37
+Last update: 2022-10-07 12:37
 <br><br>
 
 ## Future Project Ideas
@@ -101,7 +101,8 @@ Last update: 2022/10/07 12:37
 
 
 ## **python_template**<br>
-**Date Completed**: 2022-09-15<br>
+**Date Started**: 2022-09-15<br>
+**Date Completed**: 2022-09-15 (1 day)<br>
 **Language**: Python<br>
 **Overview**: A template for later Python projects. Containing:
 - cookiecutter - A template for the whole project.
@@ -119,7 +120,8 @@ Last update: 2022/10/07 12:37
 
 
 ## **basic_messaging**<br>
-**Date Completed**: 2022-09-17<br>
+**Date Started**: 2022-09-17<br>
+**Date Completed**: 2022-09-17 (1 day)<br>
 **Language**: Python<br>
 **Overview**: A basic messaging app. Effectively a prerequisite for tcp_message_sender_and_receiver. Use Flask to send a string from one endpoint (host:port pair) to another Python script.<br>
 **Result**: You can now send and receive a TCP or UDP message between a server (receiver) and client (sender).
@@ -131,7 +133,8 @@ You may need to update the host and port.<br><br>
 
 
 ## **muscle_checker**<br>
-**Date Completed**: 2022-10-09
+**Date Started**: 2022-09-29<br>
+**Date Completed**: 2022-10-09 (10 days)
 **Language**: Python<br>
 **Overview**: Input which exercises you completed this week. The system outputs which of the main muscles you missed this week and what exercises you could do to train them.<br>
 **Result**: I now have a muscle_checker Flask website which can be run anytime and outputs the muscles hit, muscles missed and what exercises to do to hit them.<br>
