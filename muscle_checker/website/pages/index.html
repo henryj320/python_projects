@@ -4,16 +4,31 @@
         <link rel="stylesheet" href='website/master.css' />
         <link rel="stylesheet" href='../master.css' />
         <link rel="stylesheet" href='../website/master.css' />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                text_input = $("#text_input");
+
+                text_input.on("input", function() {  // On text, update the height on the text_input.
+                    this.style.height = 0;  // Resets the size otherwise it will never decrease if text is removed.
+                    this.style.height = (this.scrollHeight) + "px";
+                });
+            
+            });
+        </script>
     </head>
     <body>
         <h1 id="title">Muscle Checker</h1>
         <div id="main_content">
             <div>
                 <h2>Summary</h2>
+                <br>
                 <p>
                     This page tells you which muscles you missed in your previous gym sessions. Either copy and paste your gym
                     session or update "insert_calendar_text.txt" to get started!
                 </p>
+                <br>
             </div>
             <div>
                 <h2>Input text</h2>
