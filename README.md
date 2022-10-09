@@ -134,7 +134,7 @@ You may need to update the host and port.<br><br>
 
 ## **muscle_checker**<br>
 **Date Started**: 2022-09-29<br>
-**Date Completed**: 2022-10-09 (10 days)
+**Date Completed**: 2022-10-09 (10 days)<br>
 **Language**: Python<br>
 **Overview**: Input which exercises you completed this week. The system outputs which of the main muscles you missed this week and what exercises you could do to train them.<br>
 **Result**: I now have a muscle_checker Flask website which can be run anytime and outputs the muscles hit, muscles missed and what exercises to do to hit them.<br>
