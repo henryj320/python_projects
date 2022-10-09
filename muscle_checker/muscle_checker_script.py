@@ -254,7 +254,7 @@ def run_string(string: str):
         string (str): The calendar text to get the results from.
     """
     f = open("insert_calendar_text.txt", "w")  # Opens the file to be overwritten ("w").
-    f.write(string)
+    f.write(string + "\n")
     f.close()
 
     return run("insert_calendar_text.txt")
