@@ -111,12 +111,12 @@ Last update: 2022-10-07 12:37
 - test folder - To store tests.
 - README
 - Example .py module  - Make it reference an environment variable and have a example method that can be run (and how to run it).
-- .gitignore - Git has default ones<br>
+- .gitignore - Git has default ones.<br>
 
 **Result**: I now have a cookiecutter template up and running for future Python projects.<br>
 **Running the Project**: You can call the cookiecutter template by downloading it to your machine and running:
-- cd...
-- cookiecutter ~/Documents/python_projects/python_template <br><br>
+- "cd...".
+- "cookiecutter ~/Documents/python_projects/python_template". <br><br>
 
 
 ## **basic_messaging**<br>
@@ -126,8 +126,8 @@ Last update: 2022-10-07 12:37
 **Overview**: A basic messaging app. Effectively a prerequisite for tcp_message_sender_and_receiver. Use Flask to send a string from one endpoint (host:port pair) to another Python script.<br>
 **Result**: You can now send and receive a TCP or UDP message between a server (receiver) and client (sender).
 **Running the Project**: You can run the code in the terminal by running:
-- Terminal 1: "python receiver.py udp"
-- Terminal 2: "python sender.py udp"
+- Terminal 1: "python receiver.py udp".
+- Terminal 2: "python sender.py udp".
 
 You may need to update the host and port.<br><br>
 
