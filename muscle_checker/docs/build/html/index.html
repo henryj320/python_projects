@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Welcome to muscle_checker’s documentation! &#8212; muscle_checker 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="welcome-to-muscle-checker-s-documentation">
+<h1>Welcome to muscle_checker’s documentation!<a class="headerlink" href="#welcome-to-muscle-checker-s-documentation" title="Permalink to this heading">¶</a></h1>
+<p>This is the documentation for muscle_checker. The project allows users to input their gym session. The software will then output the muscles
+that the user missed alongside other details about the session.</p>
+<span class="target" id="module-muscle_checker_script"></span><p>A python script to state which muscles have been missed given calendar text.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="muscle_checker_script.Group">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">Group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">muscles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#muscle_checker_script.Group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dataclass to hold the Group:Muscles.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="muscle_checker_script.Group.muscles">
+<span class="sig-name descname"><span class="pre">muscles</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span></em><a class="headerlink" href="#muscle_checker_script.Group.muscles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="muscle_checker_script.Group.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#muscle_checker_script.Group.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="muscle_checker_script.Muscle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">Muscle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exercises</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#muscle_checker_script.Muscle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dataclass to hold Muscle:Exercises.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="muscle_checker_script.Muscle.exercises">
+<span class="sig-name descname"><span class="pre">exercises</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span></em><a class="headerlink" href="#muscle_checker_script.Muscle.exercises" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="muscle_checker_script.Muscle.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#muscle_checker_script.Muscle.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="muscle_checker_script.convert_exercises_list_to_dict">
+<span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">convert_exercises_list_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">session_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_muscles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hit_exercises</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#muscle_checker_script.convert_exercises_list_to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take a list of exercises and convert it into JSON, calculating the group and reformatting it.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>all_groups (list): A list containing all groups.
+all_muscles (list): A list containing all muscles and associated exercises.
+hit_exercises (list): A list containing the exercises hit.</p>
+</dd>
+<dt>Returns:</dt><dd><p>json: A JSON object of the exercises.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="muscle_checker_script.find_missed_muscles">
+<span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">find_missed_muscles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hit_muscles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_groups</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#muscle_checker_script.find_missed_muscles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the muscles hit, return a list of muscles missed for the group.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>group (str): The muscle group that the hit_muscles are in.
+hit_muscles (list): A list of the muscles hit in the session.
+all_groups (list): Contains all groups, muscles and exercises.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: A list containing all of the muscles missed for a given group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="muscle_checker_script.json_file_to_dict">
+<span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">json_file_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#muscle_checker_script.json_file_to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take the location of the JSON file and return the JSON.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>file (str): The location of the JSON file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict: The JSON data represented as a Python dict.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="muscle_checker_script.read_exercises_from_text_file">
+<span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">read_exercises_from_text_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#muscle_checker_script.read_exercises_from_text_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the exercises inside of file and convert it into a Python list.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>file (str): The location of the JSON file.</p>
+</dd>
+<dt>Returns:</dt><dd><p>list: A list of the exercises inside of the file inputted.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="muscle_checker_script.run">
+<span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#muscle_checker_script.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the file. Fires off all of the functions and outputs a dict.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>file (str): Location of insert_calendar_text.txt.</p>
+</dd>
+<dt>Returns:</dt><dd><p>dict: results_dict containing all of the details of the results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="muscle_checker_script.run_string">
+<span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">run_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#muscle_checker_script.run_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the run() method, first overwriting insert_calendar_text.txt with the content of the string argument.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>string (str): The calendar text to get the results from.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="muscle_checker_script.suggested_exercises">
+<span class="sig-prename descclassname"><span class="pre">muscle_checker_script.</span></span><span class="sig-name descname"><span class="pre">suggested_exercises</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_muscles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">missed_muscle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#muscle_checker_script.suggested_exercises" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a string containing all of the exercises you could do to hit the missed muscle.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>all_muscles (list): A list containing all muscles and associated exercises.
+missed_muscle (str): The muscle missed.</p>
+</dd>
+<dt>Returns:</dt><dd><p>str: A string stating which muscle was missed and what exercises to do.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">muscle_checker</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Henry James.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

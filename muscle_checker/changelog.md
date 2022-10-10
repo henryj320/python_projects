@@ -49,3 +49,21 @@ Last update: 2022-10-08 16:30
 32. Fully working!
 33. Removed unnecessary folders and added to .gitignore. Fixed the pycache files being added to pushes.
 34. Cleaned up the README.
+35. Looked into using autodocumentation (Sphinx-doc)
+    - Updating the tox.ini file. "changedir = docs" creates a docs file.
+    - Made a source file.
+    - Made a conf.py file.
+    - Starting again reading the tutorials.
+36. Following the Sphinx documentation.
+    - Activate the ve.
+    - "pip install sphinx".
+    - "sphinx-build --version".
+    - "sphinx-quickstart docs" - Creates the files needed to get started - docs with build, source, make.bat and MakeFile inside. Source contains several files. make.bat and MakeFile are used for common Sphinx operations like rendering content.
+    - "sphinx-build -b html docs/source/ docs/build/html" - Now have our first piece of documentation.
+    - Updated index.rst.
+    - Tutorial said to run "make html", but it is a .bat file so will not run.
+    - "pip install furo". Already installed.
+    - Made the [testenv:docs] from tox.ini.
+    - Now can run it with "tox -e docs".
+37. Added to "index.rst" to contain everything.
+38. Played around with adding CSS.
