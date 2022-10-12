@@ -92,6 +92,14 @@ Last update: 2022-10-07 12:37
 **Language**: Python<br>
 **Overview**: Similar to DocumentSystem to Git. Make a program that takes a searchterm and searches the entire computer for any documents named or containing the term. Make it show sections at a time with a progress bar to learn Python progress bars in the terminal. Add a parameter for OS so that OS files can be ignored. Output should be something like "Found: X occurrences of "example" in Documents, Y occurences of "example" in Pictures.<br><br>
 
+
+## **react_dashboard**<br>
+**Language**: React<br>
+**Overview**: Develop a React frontend using a [template](https://www.creative-tim.com/templates/react-free). Develop it from scratch making use of a template's components when required. Have separate pages for each Python project. Using axios like you did in the devops sprint to connect to a running API and output the results.
+
+<br><br>
+Axios
+
 <br>
 
 ## Completed Project Ideas
