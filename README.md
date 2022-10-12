@@ -98,7 +98,14 @@ Last update: 2022-10-07 12:37
 **Overview**: Develop a React frontend using a [template](https://www.creative-tim.com/templates/react-free). Develop it from scratch making use of a template's components when required. Have separate pages for each Python project. Using axios like you did in the devops sprint to connect to a running API and output the results.
 
 <br><br>
-Axios
+
+
+## **autogenerate_gym_calendar**<br>
+**Language**: React<br>
+**Overview**: Investigate into whether it is possible to add events to your calendar given a form, just like barbers do. If you can, add a form to add your next week's gym schedule. There may be issues with adding to the correct calendar.
+
+<br><br>
+
 
 <br>
 
