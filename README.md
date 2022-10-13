@@ -1,7 +1,7 @@
 # **python_projects**
 Last update: 2022-10-07 12:37
 
-<br><br>
+<br>
 Make sure to update the Projects table: [All Projects Table](https://github.com/users/henryj320/projects/5)
 <br><br>
 
