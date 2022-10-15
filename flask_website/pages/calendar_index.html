@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href='flask_website/master.css' />
+        <link rel="stylesheet" href='../master.css' />
+        <link rel="stylesheet" href='../website/master.css' />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                text_input = $("#text_input");
+
+                text_input.on("input", function() {  // On text, update the height on the text_input.
+                    this.style.height = 0;  // Resets the size otherwise it will never decrease if text is removed.
+                    this.style.height = (this.scrollHeight) + "px";
+                });
+            
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="title">Autogenerate Gym Calendar</h1>
+        <div id="main_content">
+
+            <p>Hello</p>
+
+        </div>    
+        <footer>
+            <span>Author: Henry James</span><span>Contact email: henryj320@gmail.com</span>
+        </footer>
+    </body>
+</html>

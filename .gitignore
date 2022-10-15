@@ -1,0 +1,5 @@
+*/venv/*
+.env
+.tox
+*.egg-info
+muscle_checker/insert_calendar_text.txt
