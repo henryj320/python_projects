@@ -105,6 +105,7 @@ Make sure to update the Projects table: [All Projects Table](https://github.com/
 
 ## **autogenerate_gym_calendar**<br>
 **Language**: React<br>
+**Date Started**: 2022-10-15<br>
 **Overview**: Investigate into whether it is possible to add events to your calendar given a form, just like barbers do. If you can, add a form to add your next week's gym schedule. There may be issues with adding to the correct calendar.
 
 <br><br>
