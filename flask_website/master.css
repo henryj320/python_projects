@@ -104,6 +104,19 @@ p {
     border-radius: 5px;
 }
 
+a {
+    text-decoration: none;
+}
+
+.link {
+    margin-left: 2%;
+    margin-bottom: 2%;
+    width: 15em;
+    border: 2px solid black;
+    border-radius: 5px;
+    background: #4673c7;
+}
+
 footer {
     padding: 2%;
 
