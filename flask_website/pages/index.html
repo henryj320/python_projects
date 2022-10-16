@@ -19,35 +19,22 @@
         </script>
     </head>
     <body>
-        <h1 id="title">Muscle Checker</h1>
+        <h1 id="title">Python Projects</h1>
         <div id="main_content">
             <div>
                 <h2>Summary</h2>
                 <br>
                 <p>
-                    This page tells you which muscles you missed in your previous gym sessions. Either copy and paste your gym
-                    session or update "insert_calendar_text.txt" to get started!
+                    Welcome to my Python projects! On this page, you can navigate to any of my existing Python projects.
                 </p>
                 <br>
             </div>
             <div>
-                <h2>Input text</h2>
-                <form action="{{ url_for('muscle_checker')}}" method="post">
-                    <textarea id="text_input" name="text_input" rows="4" cols="50">Insert your calendar text here.</textarea>
-                    <button id="text_submit" type="submit">Submit</button>
-                </form>
+                <h2>Links</h2>
+                <br>
+                <p class="link"><a href="{{ url_for('muscle_checker')}}">muscle_checker</a></p>
+                <p class="link"><a href="{{ url_for('autogenerate_gym_calendar')}}">autogenerate_gym_calendar</a></p>
             </div>
-            <div>
-                <h2>Results</h2>
-                <br>
-                <p>Hit Muscle Groups: {{hit_muscle_groups}}</p>
-                <p>Missed Muscle Groups: {{missed_muscle_groups}}</p>
-                <p>Hit Muscles: {{hit_muscles}}</p>
-
-                {% for suggestion in results_dict["suggestions"] %}
-                    <p>{{suggestion}}</p>
-                {% endfor %}
-                <br>
             </div>
         </div>
         <footer>

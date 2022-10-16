@@ -7,18 +7,18 @@ from muscle_checker.muscle_checker_script import *
 app = Flask(__name__, template_folder="flask_website/pages", static_folder="flask_website")
 
 
-# @app.route("/")  # The function called on "http://127.0.0.1:5000/".
-# def main():
-#     """Run when the user goes to "http://127.0.0.1:5000/".
+@app.route("/")  # The function called on "http://127.0.0.1:5000/".
+def main():
+    """Run when the user goes to "http://127.0.0.1:5000/".
 
-#     Returns:
-#         _type_: The index.html page with results from insert_calendar_text.txt.
-#     """
-#     return render_template("index.html", results_dict=run('insert_calendar_text.txt'))
+    Returns:
+        _type_: The index.html page with results from insert_calendar_text.txt.
+    """
+    return render_template("index.html")
 
 
 @app.route('/muscle_checker', methods=['GET', 'POST'])
-def index():
+def muscle_checker():
     """Render muscle_checker_index.html with the results from insert_calendar_text.txt. If the user adds text to the text_input, it will give the results from that.
 
     Returns:
@@ -66,7 +66,7 @@ def stringify(index: str, dictionary: dict) -> str:
 
 
 @app.route("/autogenerate_gym_calendar")  # The function called on "http://127.0.0.1:5000/".
-def main():
+def autogenerate_gym_calendar():
     """Run when the user goes to "http://127.0.0.1:5000/".
 
     Returns:
