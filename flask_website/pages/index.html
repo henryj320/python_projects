@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Home Page</title>
         <link rel="stylesheet" href='flask_website/master.css' />
         <link rel="stylesheet" href='../master.css' />
         <link rel="stylesheet" href='../website/master.css' />
@@ -21,20 +22,20 @@
     <body>
         <h1 id="title">Python Projects</h1>
         <div id="main_content">
-            <div>
+            <div class="main_content_subdiv">
                 <h2>Summary</h2>
                 <br>
                 <p>
-                    Welcome to my Python projects! On this page, you can navigate to any of my existing Python projects.
+                    Welcome to my Python projects! On this page, you can navigate to any of my existing Python projects and run them.
                 </p>
                 <br>
             </div>
-            <div>
+            <div class="main_content_subdiv">
                 <h2>Links</h2>
                 <br>
-                <p class="link"><a href="{{ url_for('muscle_checker')}}">muscle_checker</a></p>
-                <p class="link"><a href="{{ url_for('autogenerate_gym_calendar')}}">autogenerate_gym_calendar</a></p>
-            </div>
+                <a class="link" href="{{ url_for('muscle_checker')}}">muscle_checker</a>
+                <a class="link" href="{{ url_for('autogenerate_gym_calendar')}}">autogenerate_gym_calendar</a>
+                <br>
             </div>
         </div>
         <footer>

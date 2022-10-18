@@ -1,0 +1,61 @@
+input, select, option {
+    margin-left: 2%;
+    margin-top: 1%;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+input[type="number"] {
+    width: 10%;
+}
+
+#totalSessions {
+    background: #acacac;
+}
+
+#numberOfDiv label {
+    display: inline-block;
+    width: 45%;
+}
+
+.half {
+    width: 42.5%;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+#submitButton {
+    margin: 0;
+    margin-bottom: 2%;
+    border: 5px solid black;
+}
+
+#resultsTable {
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin: 2%;
+    width: 96%;
+}
+
+#resultsTable * {
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+#resultsTable th {
+    background-color: #1a315c;
+    width: 33%;
+    padding: 4%;
+    font-size: 130%;
+}
+
+#resultsTable td {
+    background: #4673c7;
+}
+
+#resultsTable input[type="button"] {
+    padding: 5%;
+}

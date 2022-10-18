@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href='flask_website/master.css' />
-        <link rel="stylesheet" href='../master.css' />
-        <link rel="stylesheet" href='../website/master.css' />
+        <title>Add to Calendar</title>
+        <link rel="stylesheet" href='flask_website/master.css'/>
+        <link rel="stylesheet" href='../master.css'/>
+        <link rel="stylesheet" href='../website/master.css'/>
+        <link rel="stylesheet" href='flask_website/calendar_css.css'/>
+        <link rel="stylesheet" href='../calendar_css.css'/>
+        <link rel="stylesheet" href='../website/calendar_css.css'/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="flask_website/calendar_script.js"></script>
+        <script src="../calendar_script.js"></script>
+        <script src="../website/calendar_script.js"></script>
         <script>
             $(document).ready(function(){
 
@@ -21,10 +28,132 @@
     <body>
         <h1 id="title">Autogenerate Gym Calendar</h1>
         <div id="main_content">
-
-            <p>Hello</p>
-
-        </div>    
+            <div class="main_content_subdiv">
+                <h2>Input</h2>
+                <br>
+                <form action="{{ url_for('autogenerate_gym_calendar')}}" method="post">
+                    <div class="main_content_subdiv">
+                        <h3>Which week would you like to add your gym sessions to?<br>(Select a Monday)</h3>
+                        <input id="weekMonday" name="weekMonday" type="date">
+                        <br><br><br>
+                        <h3>Which days are you exercising?</h3>
+                        <div class="half">
+                            <input type="checkbox" id="monCheck" name="monday" value="monday">
+                            <label for="monday">Monday</label>
+                            <br>
+                            <input type="checkbox" id="tuesCheck" name="tuesday" value="tuesday">
+                            <label for="tuesday">Tuesday</label>
+                            <br>
+                            <input type="checkbox" id="wedCheck" name="wednesday" value="wednesday">
+                            <label for="wednesday">Wednesday</label>
+                            <br>
+                            <input type="checkbox" id="thursCheck" name="thursday" value="thursday">
+                            <label for="thursday">Thursday</label>
+                        </div>
+                        <div class="half">
+                            <input type="checkbox" id="friCheck" name="friday" value="friday">
+                            <label for="friday">Friday</label>
+                            <br>
+                            <input type="checkbox" id="satCheck" name="saturday" value="saturday">
+                            <label for="saturday">Saturday</label>
+                            <br>
+                            <input type="checkbox" id="sunCheck" name="sunday" value="sunday">
+                            <label for="sunday">Sunday</label>
+                            <br><br>
+                        </div>
+                        <br><br>
+                    </div>
+                    <div class="main_content_subdiv" id="numberOfDiv">
+                        <h3>How many of each session type would you like to add?</h3>
+                        <br>
+                        <label for="totalSessions">Number of exercise sessions:</label>
+                        <input type="number" id="totalSessions" min="1" value="3" step="1" readonly>
+                        <label for="gymSessions">Number of gym sessions:</label>
+                        <input type="number" id="gymSessions" name="gymSessions" min="0" max="10" value="1" step="1">
+                        <label for="runSessions">Number of runs sessions:</label>
+                        <input type="number" id="runSessions" name="runSessions" min="0" max="10" value="1" step="1">
+                        <label for="otherSessions">Number of other sessions:</label>
+                        <input type="number" id="otherSessions" name="otherSessions" min="0" max="10" value="1" step="1">
+                        <br><br>
+                    </div>
+                    <div class="main_content_subdiv" id="specificDays">
+                        <h3>Do you have any specific obligations?</h3>
+                        <br>
+                        <span>I have</span>
+                        <select id="exercise1" name="exercise1">
+                            <option value="not_selected_exercise">Select Exercise</option>
+                            <option value="canoe_polo">Canoe Polo</option>
+                            <option value="kayaking">Kayaking</option>
+                            <option value="bouldering">Bouldering</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span>on a</span>
+                        <select id="day1" name="day1">
+                            <option value="not_selected_day">Select Day</option>
+                            <option value="monSpec">Monday</option>
+                            <option value="tuesSpec">Tuesday</option>
+                            <option value="wedSpec">Wednesday</option>
+                            <option value="thursSpec">Thursday</option>
+                            <option value="friSpec">Friday</option>
+                            <option value="satSpec">Saturday</option>
+                            <option value="sunSpec">Sunday</option>
+                        </select>
+                        <br><br>
+                        <p>Need to automatically add another row if the first is filled.</p>
+                        <br>
+                    </div>
+                    <input id="submitButton" type="submit">
+                </form>
+            </div>
+            <div class="main_content_subdiv">
+                <h2>Results</h2>
+                <br>
+                <table id="resultsTable">
+                    <tr>
+                        <th>Day</th>
+                        <th>Session</th>
+                        <th>Add to Calendar</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td id="monResultTD">Rest</td>
+                        <td><input id="monResultButton" type="button" value="Add to Calendar"></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td id="monResultTD">Rest</td>
+                        <td><input id="tuesResultButton" type="button" value="Add to Calendar"></td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td id="wedResultTD">Rest</td>
+                        <td><input id="wedResultButton" type="button" value="Add to Calendar"></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td id="thursResultTD">Rest</td>
+                        <td><input id="thursResultButton" type="button" value="Add to Calendar"></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td id="friResultTD">Rest</td>
+                        <td><input id="friResultButton" type="button" value="Add to Calendar"></td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td id="satResultTD">Rest</td>
+                        <td><input id="satResultButton" type="button" value="Add to Calendar"></td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td id="sunResultTD">Rest</td>
+                        <td><input id="sunResultButton" type="button" value="Add to Calendar"></td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+        <br>
         <footer>
             <span>Author: Henry James</span><span>Contact email: henryj320@gmail.com</span>
         </footer>
