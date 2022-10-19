@@ -12,6 +12,8 @@
 body {
     background: #181818;
     background-image: linear-gradient(165deg, #181818, #282828, #181818);
+    min-height: 100%;
+    position: relative;
 }
 
 #title {
@@ -35,7 +37,7 @@ body {
     border-radius:10px;
 }
 
-p {
+p, label {
     font-family: Arial, Helvetica, sans-serif
 }
 
@@ -58,7 +60,7 @@ p {
     border-radius:10px;
 }
 
-#main_content div {
+.main_content_subdiv {
     margin-bottom: 25px;
 
     background-color: #2a5097;
@@ -104,21 +106,29 @@ p {
     border-radius: 5px;
 }
 
-a {
-    text-decoration: none;
-}
-
 .link {
     margin-left: 2%;
     margin-bottom: 2%;
+
+    display: block;
     width: 15em;
+
+    text-decoration: none;
+
+    background: #4673c7;
+
     border: 2px solid black;
     border-radius: 5px;
-    background: #4673c7;
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    
     padding: 2%;
+
+    width: 96%;
+    height: 0.5%;
 
     background: #0f0f0f;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Muscle Checker</title>
         <link rel="stylesheet" href='flask_website/master.css' />
         <link rel="stylesheet" href='../master.css' />
         <link rel="stylesheet" href='../website/master.css' />
@@ -21,7 +22,7 @@
     <body>
         <h1 id="title">Muscle Checker</h1>
         <div id="main_content">
-            <div>
+            <div class="main_content_subdiv">
                 <h2>Summary</h2>
                 <br>
                 <p>
@@ -30,14 +31,14 @@
                 </p>
                 <br>
             </div>
-            <div>
+            <div class="main_content_subdiv">
                 <h2>Input text</h2>
                 <form action="{{ url_for('muscle_checker')}}" method="post">
                     <textarea id="text_input" name="text_input" rows="4" cols="50">Insert your calendar text here.</textarea>
                     <button id="text_submit" type="submit">Submit</button>
                 </form>
             </div>
-            <div>
+            <div class="main_content_subdiv">
                 <h2>Results</h2>
                 <br>
                 <p>Hit Muscle Groups: {{hit_muscle_groups}}</p>
