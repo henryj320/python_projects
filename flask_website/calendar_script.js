@@ -229,4 +229,9 @@ function addSpecificObligation(latestSpecDay, previousNumber) {
     $("#specificDays").append($("<br>"));
     $("#specificDays").append($("<br>"));
 
+
+    // $("#monCheck").toggle(this.checked);
+    
+    // $("#monCheck").attr("checked")
+    $("#monCheck").prop("checked", true)
 }
