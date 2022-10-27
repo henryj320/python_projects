@@ -1,4 +1,5 @@
 """This python script is used to generate the links required to make new calendar entries."""
+from calendar import week
 import urllib.parse
 import random
 
@@ -21,6 +22,7 @@ def run_autogenerate(form_details: dict=default_form_details) -> dict:
         dict: The calendar event links in a dict.
     """
 
+    # Arrays to contain all links to calendar invites.
     monday_array = []
     tuesday_array = []
     wednesday_array = []
@@ -35,43 +37,74 @@ def run_autogenerate(form_details: dict=default_form_details) -> dict:
     left.append(int(form_details["runs"]))
     left.append(int(form_details["other"]))
 
+    total_sessions = left[0] + left[1]
 
-    total_sessions = left[0] + left[1] # + left[2]
 
+    week_dates = calculate_dates(form_details["week_monday"])
 
-    print(left[2])
+    # print(week_dates)
+
 
     # Adds each specific obligation to the relevant arrays
     for x in form_details["specific_obligations"]:
 
-        sport = x[1]
+        sport = x[1]  # E.g. "kayaking"
+
+
+        date_monday = convert_date(form_details["week_monday"])
+
 
         title_string = str(sport).capitalize() + ": 0 mins (00:00)"
         title_string = urllib.parse.quote(title_string, safe='')
+
+        event_sections = {
+            "date": week_dates[0],  # 25/10/2022
+            "title": title_string,
+            "description": ""
+        }
+
+        if x[0] == "monday":
+
+            event_sections.update({"date": week_dates[0]})
+            monday_array.append(create_link(event_sections))
+
+        if x[0] == "tuesday":
+
+            event_sections.update({"date": week_dates[1]})
+            tuesday_array.append(create_link(event_sections))
+
+        if x[0] == "wednesday":
+
+            event_sections.update({"date": week_dates[2]})
+            wednesday_array.append(create_link(event_sections))
+
+        if x[0] == "thursday":
+
+            event_sections.update({"date": week_dates[3]})
+            thursday_array.append(create_link(event_sections))
+
+        if x[0] == "friday":
+
+            event_sections.update({"date": week_dates[4]})
+            friday_array.append(create_link(event_sections))
+
+        if x[0] == "saturday":
+
+            event_sections.update({"date": week_dates[5]})
+            saturday_array.append(create_link(event_sections))
+
+        if x[0] == "sunday":
+
+            event_sections.update({"date": week_dates[6]})
+            sunday_array.append(create_link(event_sections))
+
+
 
         event_sections = {
             "date": convert_date(form_details["week_monday"]),  # 25/10/2022
             "title": title_string,
             "description": ""
         }
-
-        link = create_link(event_sections)
-
-
-        if x[0] == "monday":
-            monday_array.append(link)
-        if x[0] == "tuesday":
-            tuesday_array.append(link)
-        if x[0] == "wednesday":
-            wednesday_array.append(link)
-        if x[0] == "thursday":
-            thursday_array.append(link)
-        if x[0] == "friday":
-            friday_array.append(link)
-        if x[0] == "saturday":
-            saturday_array.append(link)
-        if x[0] == "sunday":
-            sunday_array.append(link)
 
 
 
@@ -100,9 +133,6 @@ def run_autogenerate(form_details: dict=default_form_details) -> dict:
             if chosen == 1 and left[1] > 0:
                 not_allowed = False
                 left[1] -= 1
-            # if chosen == 2 and left[2] > 0:
-            #     not_allowed = False
-            #     left[2] -= 1
 
 
         sessions = ["Gym", "Run"]
@@ -117,17 +147,17 @@ def run_autogenerate(form_details: dict=default_form_details) -> dict:
         # TODO: Change date into the right format
 
         date_monday = convert_date(form_details["week_monday"])
-        date_string = str(date_monday) + "%2F"
-        date_string = date_string + str(int(date_monday) + 1)
 
         if chosen == 0:  # If a gym session.
             title_string = "Gym: "+ gym_sessions.pop() + ", 0 mins (00:00)"
+        elif chosen == 1:  # If a run
+            title_string = "Ran 0.0K in 00:00"
         else:
             title_string = str(sessions[chosen]) + ": 0 mins (00:00)"
         title_string = urllib.parse.quote(title_string, safe='')
 
         event_sections = {
-            "date": date_string,  # 25/10/2022
+            "date": week_dates[0],  # 25/10/2022
             "title": title_string,
             "description": ""
         }
@@ -138,19 +168,39 @@ def run_autogenerate(form_details: dict=default_form_details) -> dict:
 
 
         if day == "monday":
-            monday_array.append(link)
+
+            event_sections.update({"date": week_dates[0]})
+            monday_array.append(create_link(event_sections))
+
         if day == "tuesday":
-            tuesday_array.append(link)
+
+            event_sections.update({"date": week_dates[1]})
+            tuesday_array.append(create_link(event_sections))
+
         if day == "wednesday":
-            wednesday_array.append(link)
+
+            event_sections.update({"date": week_dates[2]})
+            wednesday_array.append(create_link(event_sections))
+
         if day == "thursday":
-            thursday_array.append(link)
+
+            event_sections.update({"date": week_dates[3]})
+            thursday_array.append(create_link(event_sections))
+
         if day == "friday":
-            friday_array.append(link)
+
+            event_sections.update({"date": week_dates[4]})
+            friday_array.append(create_link(event_sections))
+
         if day == "saturday":
-            saturday_array.append(link)
+
+            event_sections.update({"date": week_dates[5]})
+            saturday_array.append(create_link(event_sections))
+
         if day == "sunday":
-            sunday_array.append(link)
+
+            event_sections.update({"date": week_dates[6]})
+            sunday_array.append(create_link(event_sections))
 
         # print(link)
 
@@ -170,8 +220,6 @@ def run_autogenerate(form_details: dict=default_form_details) -> dict:
         
     }
 
-    print(form_details)
-
     return link_dict
 
 
@@ -180,7 +228,12 @@ def create_link(event_sections: dict) -> str:
     link_start = "https://calendar.google.com/calendar/render?action=TEMPLATE"
 
 
-    link_date = f'&dates={event_sections["date"]}'
+    print("\nDate:")
+    print(event_sections["date"])
+    print("\n")
+    dates = int(event_sections["date"])
+    dated = str(dates) + "/" + str(dates + 1)
+    link_date = f'&dates={dated}'
 
     link_description = "&details="
 
@@ -213,4 +266,39 @@ def convert_date(date: str) -> str:
 # convert_date("2022-10-10")
 
 
+def calculate_dates(week_monday: str) -> list:
+
+    week_monday_array = week_monday.split("-")
+    year = week_monday_array[0]
+    month = week_monday_array[1]
+    day = week_monday_array[2]
+
+    week_dates = [convert_date(week_monday)]  # Contains Monday
+
+    
+    total_days = 31
+    thirty_days = [4,6,9,11]
+
+    if month == 2:  # If the month is february.
+        if int(year) % 4 == 0:  # If a leap year.
+            total_days = 29
+        else:
+            total_days = 28
+    elif month in thirty_days:  # If in a month with 30 days.
+        total_days = 30
+
+    for x in range(1, 7):  # 1, 2, 3, 4, 5, 6
+        next_day = int(day) + x
+        use_month = month
+            
+        if next_day > total_days:  # If it goes over the number of days in the month (e.g. 32)
+            next_day = "0" + str(next_day - total_days)
+            use_month = str(int(month) + 1)
+
+        week_dates.append(str(year) + str(use_month) + str(next_day))
+
+    return week_dates
+
+
 print(run_autogenerate())
+# print(calculate_dates("2022-10-27"))

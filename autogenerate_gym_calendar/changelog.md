@@ -14,3 +14,4 @@ Last update: 2022/10/15 00:50
 5. Merged all flask apps into one. Run it inside of python_projects:
     - "flask run --host=0.0.0.0".
     - No VE required.
+6. Wrote a calendar_index.html file to contain a form to add a week's worth of new calendar items.
