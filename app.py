@@ -3,6 +3,8 @@
 from flask import Flask, render_template, Response, request, redirect, url_for
 from muscle_checker.muscle_checker_script import *
 
+from autogenerate_gym_calendar.autogenerate_script import *
+
 
 app = Flask(__name__, template_folder="flask_website/pages", static_folder="flask_website")
 
@@ -65,11 +67,109 @@ def stringify(index: str, dictionary: dict) -> str:
     return result
 
 
-@app.route("/autogenerate_gym_calendar")  # The function called on "http://127.0.0.1:5000/".
+@app.route("/autogenerate_gym_calendar", methods=['GET', 'POST'])  # The function called on "http://127.0.0.1:5000/".
 def autogenerate_gym_calendar():
     """Run when the user goes to "http://127.0.0.1:5000/".
 
     Returns:
         _type_: The calendar_index.html page.
     """
-    return render_template("calendar_index.html")
+
+    links_dict = {'monday': [], 'tuesday': [], 'wednesday': [], 'thursday': [], 'friday': [], 'saturday': [], 'sunday': []}
+
+
+    if request.method == "POST":
+
+
+        form_dict = request.form  # Contains all of the information received by the form
+
+        print("form_dict:")
+        print(form_dict)
+
+
+
+        weekMonday = form_dict.get("weekMonday")
+
+        days_selected = []
+        monday_selected = form_dict.get("monday")  # If not selected, it is None
+        tuesday_selected = form_dict.get("tuesday")
+        wednesday_selected = form_dict.get("wednesday")
+        thursday_selected = form_dict.get("thursday")
+        friday_selected = form_dict.get("friday")
+        saturday_selected = form_dict.get("saturday")
+        sunday_selected = form_dict.get("sunday")
+
+        if monday_selected:  # Adds each not None day to days_selected (e.g. ['monday', 'wednesday', 'saturday']).
+            days_selected.append("monday")
+        if tuesday_selected:
+            days_selected.append("tuesday")
+        if wednesday_selected:
+            days_selected.append("wednesday")
+        if thursday_selected:
+            days_selected.append("thursday")
+        if friday_selected:
+            days_selected.append("friday")
+        if saturday_selected:
+            days_selected.append("saturday")
+        if sunday_selected:
+            days_selected.append("sunday")
+
+        # Adds all specific obligations into a single array.
+        not_ended = True
+        count = 1
+        specific_obligations = []
+        while not_ended:
+            day = form_dict.get("day" + str(count))
+            exercise = form_dict.get("exercise" + str(count))
+
+            if day != "not_selected_day" and day != None:
+
+                specific_obligations.append([day, exercise])
+
+                count = count + 1
+            else:
+                not_ended = False
+
+
+
+        # Collates all of the useful form data into a single dict.
+        form_details = {
+            "week_monday": weekMonday,
+            "days_selected": days_selected,
+            "gym": form_dict.get("gymSessions"),
+            "runs": form_dict.get("runSessions"),
+            "other": form_dict.get("otherSessions"),
+            "specific_obligations": specific_obligations
+        }
+
+        print("\nform_details:")
+        print(form_details)
+
+        links_dict = run_autogenerate(form_details)
+
+        print(links_dict)
+
+        # TODO: Create variables for runsAdded, gymAdded, otherAdded
+            # Create a dict object
+            # Add all specific obligations first, making sure to update otherAdded each time
+            # Add the other gym/runs randomly
+                # Make sure the gym link is Push, Pull or Legs
+                # Add those to the days
+
+        # Need to send:
+        # Day of each href
+        # Button href for each of the buttons
+        # dict = {
+        #       "monday": [
+        #           {
+        #               "session": "Gym",
+        #               "link": "https://..."
+        #           }
+        #       ],
+        #       "tuesday": []
+        #       ...
+        # }
+        print(links_dict)
+        return render_template("calendar_index.html", links_dict=links_dict)
+
+    return render_template("calendar_index.html", links_dict=links_dict)

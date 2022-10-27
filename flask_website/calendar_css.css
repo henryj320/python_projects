@@ -11,7 +11,7 @@ input[type="number"] {
     width: 10%;
 }
 
-#totalSessions {
+#totalSessions, #otherSessions {
     background: #acacac;
 }
 
@@ -39,12 +39,6 @@ input[type="number"] {
     width: 96%;
 }
 
-#resultsTable * {
-    text-align: center;
-    border: 1px solid black;
-}
-
-
 #resultsTable th {
     background-color: #1a315c;
     width: 33%;
@@ -54,8 +48,22 @@ input[type="number"] {
 
 #resultsTable td {
     background: #4673c7;
+    text-align: center;
+    border: 1px solid black;
 }
 
 #resultsTable input[type="button"] {
     padding: 5%;
+}
+
+.addToCalendarA {
+    border-radius: 5px;
+    font-size: 90%;
+    background: #f5f5f5;
+    width: 80%;
+    margin-left: 10%;
+    border: 1px solid black;
+    padding: 5%;
+    color: black;
+    text-decoration: none;
 }
