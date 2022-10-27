@@ -53,7 +53,8 @@
                 "Machine Chest Flys",
                 "Chest Dips",
                 "Tricep Dips",
-                "Dumbbell Bench Press"
+                "Dumbbell Bench Press",
+                "Chest Press Machine"
             ]
         },
         {
@@ -141,7 +142,10 @@
             "exercises": [
                 "Deadlifts",
                 "Landmine Rows",
-                "T-Bar Rows"
+                "T-Bar Rows",
+                "Cable Rows",
+                "Close Grip Cable Rows",
+                "CG Cable Rows"
             ]
         },
         {
@@ -205,7 +209,8 @@
             "name": "Abs",
             "exercises": [
                 "Abs",
-                "Obliques"
+                "Obliques",
+                "Knee Raises"
             ]
         }
     ]
