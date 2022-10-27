@@ -31,7 +31,7 @@ $(document).ready(function() {  // Entered when the page has finished loading.
     latestSpecDay.change(function() {
         if (enabled) {
 
-            addSpecificObligation(latestSpecDay, highestSpecObligation)
+            addSpecificObligation(latestSpecDay, highestSpecObligation, otherSessions)
 
             highestSpecObligation = highestSpecObligation + 1
     
@@ -99,7 +99,10 @@ function setTotalSessions(totalSessions, gym, run, other) {
 }
 
 
-function addSpecificObligation(latestSpecDay, previousNumber) {
+function addSpecificObligation(latestSpecDay, previousNumber, otherSessions) {
+
+    otherSessionsVal = otherSessions.val()
+    otherSessions.val(parseInt(otherSessionsVal) + 1)
 
     let nextNumber = previousNumber + 1
     

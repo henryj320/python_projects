@@ -75,6 +75,8 @@ def autogenerate_gym_calendar():
         _type_: The calendar_index.html page.
     """
 
+    links_dict = {'monday': [], 'tuesday': [], 'wednesday': [], 'thursday': [], 'friday': [], 'saturday': [], 'sunday': []}
+
 
     if request.method == "POST":
 
@@ -145,6 +147,8 @@ def autogenerate_gym_calendar():
 
         links_dict = run_autogenerate(form_details)
 
+        print(links_dict)
+
         # TODO: Create variables for runsAdded, gymAdded, otherAdded
             # Create a dict object
             # Add all specific obligations first, making sure to update otherAdded each time
@@ -165,6 +169,7 @@ def autogenerate_gym_calendar():
         #       "tuesday": []
         #       ...
         # }
-        return render_template("calendar_index.html")
+        print(links_dict)
+        return render_template("calendar_index.html", links_dict=links_dict)
 
-    return render_template("calendar_index.html")
+    return render_template("calendar_index.html", links_dict=links_dict)
