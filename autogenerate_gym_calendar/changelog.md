@@ -17,5 +17,13 @@ Last update: 2022/10/27 23:36
 6. Wrote a calendar_index.html file to contain a form to add a week's worth of new calendar items.
 7. Wrote the autogenerate_script.py.
 8. Added the "Results" part of the webpage.
-9. Testing and bugfixing
+9. Testing and bugfixing.
 10. Made it so that "Add to Calendar" only shows if the day is not a rest day.
+11. Created a tox.ini file.
+12. Created a virtual environment.
+    - "cd autogenerate_gym_calendar"
+    - "python3 -m venv venv"
+    - ". venv/bin/activate"
+    - "tox"
+13. Fixed all autodocstyle and autocodestyle errors.
+14. Made it so results only shows if the load method is POST.

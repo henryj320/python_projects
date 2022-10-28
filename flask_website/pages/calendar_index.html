@@ -103,6 +103,7 @@
                     <input id="submitButton" type="submit">
                 </form>
             </div>
+            {% if method_post %}
             <div class="main_content_subdiv">
                 <h2>Results</h2>
                 <br>
@@ -193,7 +194,7 @@
                     <tr>
                         <td>Sunday</td>
                         {% for link in links_dict["sunday"] %}
-                        <td id="sunResultTD">{{link[1]}}</td>
+                        <td id="satResultTD">{{link[1]}}</td>
                         <td>
                             {% if link[0] != '-' %}
                                 <a href="{{link[0]}}" class="addToCalendarA">Add to Calendar</a>
@@ -206,8 +207,9 @@
                 </table>
                 <br>
             </div>
+            {% endif %}
         </div>
-        <br>
+        <br><br><br><br>
         <footer>
             <span>Author: Henry James</span><span>Contact email: henryj320@gmail.com</span>
         </footer>

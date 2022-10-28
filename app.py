@@ -148,28 +148,6 @@ def autogenerate_gym_calendar():
         links_dict = run_autogenerate(form_details)
 
         print(links_dict)
+        return render_template("calendar_index.html", links_dict=links_dict, method_post=True)
 
-        # TODO: Create variables for runsAdded, gymAdded, otherAdded
-            # Create a dict object
-            # Add all specific obligations first, making sure to update otherAdded each time
-            # Add the other gym/runs randomly
-                # Make sure the gym link is Push, Pull or Legs
-                # Add those to the days
-
-        # Need to send:
-        # Day of each href
-        # Button href for each of the buttons
-        # dict = {
-        #       "monday": [
-        #           {
-        #               "session": "Gym",
-        #               "link": "https://..."
-        #           }
-        #       ],
-        #       "tuesday": []
-        #       ...
-        # }
-        print(links_dict)
-        return render_template("calendar_index.html", links_dict=links_dict)
-
-    return render_template("calendar_index.html", links_dict=links_dict)
+    return render_template("calendar_index.html", links_dict=links_dict, method_post=False)
