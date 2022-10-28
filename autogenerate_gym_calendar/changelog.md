@@ -27,3 +27,4 @@ Last update: 2022/10/27 23:36
     - "tox"
 13. Fixed all autodocstyle and autocodestyle errors.
 14. Made it so results only shows if the load method is POST.
+15. Updated the README and closed the project.
