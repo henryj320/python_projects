@@ -103,14 +103,6 @@ Make sure to update the Projects table: [All Projects Table](https://github.com/
 <br><br>
 
 
-## **autogenerate_gym_calendar**<br>
-**Language**: React<br>
-**Date Started**: 2022-10-15<br>
-**Overview**: Investigate into whether it is possible to add events to your calendar given a form, just like barbers do. If you can, add a form to add your next week's gym schedule. There may be issues with adding to the correct calendar.
-
-<br><br>
-
-
 <br>
 
 ## Completed Project Ideas
@@ -164,4 +156,13 @@ You may need to update the host and port.<br><br>
 - Run ". venv/bin/activate" to activate the new environment.
 - Run "flask run --host=0.0.0.0" to start running the website.
 - Go to "127.0.0.1:5000".
+<br><br>
+
+## **autogenerate_gym_calendar**<br>
+**Date Started**: 2022-10-15<br>
+**Date Completed**: 2022-10-28 (13 days)<br>
+**Language**: React<br>
+**Overview**: Investigate into whether it is possible to add events to your calendar given a form, just like barbers do. If you can, add a form to add your next week's gym schedule. There may be issues with adding to the correct calendar.
+**Result**: I now have a autogenerate_script and calendar_index.html page to allow the user to create a gym schedule complete with links to add the events to their calendar. There are a couple of bugs still to fix.<br>
+**Running the Project**: The website can be run simply by going to [http://192.168.1.109:5000/autogenerate_gym_calendar] and filling in the details.
 <br><br>
