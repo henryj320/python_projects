@@ -1,5 +1,5 @@
 # muscle_checker
-Last update: 2022-10-08 16:30
+Last update: 2022-11-03 15:34
 <br><br>
 
 ## Changelog for muscle_checker
@@ -67,3 +67,4 @@ Last update: 2022-10-08 16:30
     - Now can run it with "tox -e docs".
 37. Added to "index.rst" to contain everything.
 38. Played around with adding CSS.
+39. Fixed linting in the pipleline. Now the GitHub runner fails if linting fails.
