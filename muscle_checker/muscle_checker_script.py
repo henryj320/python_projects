@@ -65,7 +65,7 @@ def read_exercises_from_text_file(file: str) -> list:
 
 
 def convert_exercises_list_to_dict(session_number: int, all_groups: list, all_muscles: list, hit_exercises: list) -> dict:
-    """Takes a list of exercises and convert it into JSON, calculating the group and reformatting it.
+    """Take a list of exercises and convert it into JSON, calculating the group and reformatting it.
 
     Args:
         all_groups (list): A list containing all groups.
