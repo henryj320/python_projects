@@ -2,6 +2,7 @@
 from calendar import week
 import urllib.parse
 import random
+from datetime import datetime
 
 # Default used for testing.
 default_form_details = {
@@ -196,9 +197,16 @@ def create_link(event_sections: dict) -> str:
     dated = str(dates) + "/" + str(dates + 1)
     link_date = f'&dates={dated}'
 
-    link_description = f'&details={event_sections["description"]}'
+    # Description is optional, so have an option of it being blank.
+    link_description = ""
+    if event_sections["description"]:
+        link_description = f'&details={event_sections["description"]}'
 
-    link_title = f'&text={event_sections["title"]}'
+    # If there is no title, set it to "Title"
+    try:
+        link_title = f'&text={event_sections["title"]}'
+    except KeyError:
+        link_title = "&text=Title"
 
     # https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20221025%2F20221026&details=The%20Desc&text=The%20Title
     link_full = link_start + link_date + link_description + link_title
@@ -215,7 +223,16 @@ def convert_date(date: str) -> str:
     Returns:
         str: The date in the new format.
     """
-    date_array = date.split("-")
+    try:
+        date_array = date.split("-")
+
+        if len(date_array[0]) == 2:  # If the date given is in reverse order.
+            date_array = date_array[::-1]
+
+    except AttributeError:  # If the date provided is not a string return today instead.
+        date = datetime.today().strftime('%Y-%m-%d')
+        date_array = date.split("-")
+
     return "".join(date_array)
 
 

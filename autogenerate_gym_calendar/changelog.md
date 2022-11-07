@@ -1,5 +1,5 @@
 # autogenerate_gym_calendar
-Last update: 2022/10/27 23:36
+Last update: 2022/11/03 23:36
 <br><br>
 
 ## Changelog for autogenerate_gym_calendar
@@ -28,3 +28,8 @@ Last update: 2022/10/27 23:36
 13. Fixed all autodocstyle and autocodestyle errors.
 14. Made it so results only shows if the load method is POST.
 15. Updated the README and closed the project.
+16. Ran toxing
+    - Added environment.yml
+    - Added to the tox.ini
+    - "ERROR: InvocationError" caused by running pytest without any tests existing
+17. Added tests for autogenerate_script.
