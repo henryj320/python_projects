@@ -106,7 +106,7 @@ Make sure to update the Projects table: [All Projects Table](https://github.com/
 **Overview**: A Jupyter Notebooks program to chart out your running progress. In future, it could be adapted into a React page. The charts would show:
 - Weekly distance
 - Weekly average running pace
-- Number of runs each week
+- Number of runs each week<br>
 This project could then be added to in order to create predictions. In other words, "if you continue with this average, then this is where you will be in 6 weeks". You could improve this further to add your goals and the chart could show what you would need to do. For example:
 - If your goal is to increase pace from 7:30 average to 6:30 average, then pace needs to increase by x each week (with a knowledge on the limit of realistic pace increase).<br><br>
 
