@@ -1,5 +1,5 @@
 # **python_projects**
-Last update: 2022-10-15 01:37
+Last update: 2022-12-07 12:57
 
 <br>
 Make sure to update the Projects table: [All Projects Table](https://github.com/users/henryj320/projects/5)
@@ -98,7 +98,18 @@ Make sure to update the Projects table: [All Projects Table](https://github.com/
 
 ## **react_dashboard**<br>
 **Language**: React<br>
-**Overview**: Develop a React frontend using a [template](https://www.creative-tim.com/templates/react-free). Develop it from scratch making use of a template's components when required. Have separate pages for each Python project. Using axios like you did in the devops sprint to connect to a running API and output the results.
+**Overview**: Develop a React frontend using a [template](https://www.creative-tim.com/templates/react-free). Develop it from scratch making use of a template's components when required. Have separate pages for each Python project. Using axios like you did in the devops sprint to connect to a running API and output the results.<br><br>
+
+
+## **run_predictions**<br>
+**Language**: Python<br>
+**Overview**: A Jupyter Notebooks program to chart out your running progress. In future, it could be adapted into a React page. The charts would show:
+- Weekly distance
+- Weekly average running pace
+- Number of runs each week
+This project could then be added to in order to create predictions. In other words, "if you continue with this average, then this is where you will be in 6 weeks". You could improve this further to add your goals and the chart could show what you would need to do. For example:
+- If your goal is to increase pace from 7:30 average to 6:30 average, then pace needs to increase by x each week (with a knowledge on the limit of realistic pace increase).<br><br>
+
 
 <br><br>
 
