@@ -245,7 +245,12 @@ def calculate_dates(week_monday: str) -> list:
     Returns:
         list: An array of all the dates converted.
     """
-    week_monday_array = week_monday.split("-")  # Splits "2022-10-25" into ["2022", "10", "25"].
+    try:
+        week_monday_array = week_monday.split("-")  # Splits "2022-10-25" into ["2022", "10", "25"].
+    except AttributeError:
+        # Entered if the input is not a valid str.
+        week_monday_array = str(datetime.today().strftime('%Y-%m-%d')).split("-")
+
     year = week_monday_array[0]
     month = week_monday_array[1]
     day = week_monday_array[2]
