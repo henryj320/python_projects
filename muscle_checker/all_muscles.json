@@ -98,6 +98,9 @@
             "exercises": [
                 "Rear Delt Machine",
                 "Bent-Over Row",
+                "Bent Over Row",
+                "Bent-Over Rows",
+                "Bent Over Rows",
                 "Dumbbell W-Raises",
                 "W-Raises"
             ]
@@ -126,7 +129,11 @@
                 "Hanging Half Pull Ups",
                 "Hanging Half Pull-Ups",
                 "Chin-Ups",
-                "Lat Pull-Downs"
+                "Lat Pull-Downs",
+                "Bent-Over Row",
+                "Bent Over Row",
+                "Bent-Over Rows",
+                "Bent Over Rows"
             ]
         },
         {
@@ -204,7 +211,8 @@
                 "Deadlifts",
                 "Prone Leg Curls",
                 "Leg Curl Machine",
-                "Leg Curls"
+                "Leg Curls",
+                "Calf Raises"
             ]
         },
         {
