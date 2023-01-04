@@ -1,5 +1,5 @@
 # **python_projects**
-Last update: 2022-12-22 20:17
+Last update: 2023-01-04 21:17
 
 <br>
 Make sure to update the Projects table: [All Projects Table](https://github.com/users/henryj320/projects/5)
@@ -49,46 +49,6 @@ Make sure to update the Projects table: [All Projects Table](https://github.com/
 ## **tcp_message_sender_and_receiver**<br>
 **Language**: Python<br>
 **Overview**: Write a program that sends and receives message from the basics. Generate a TCP segment with all of the fields in binary. Set up a port to send on and a port to receive on. Use your Java code as a reference. Importantly, the receiver needs to be listening on the port. Use datasubs to find how to run an app on a certain portand listen to requests. Set out the plan logically.<br><br>
-
-
-## **height_determination_software**<br>
-**Language**: Not a clue<br>
-**Overview**: Use vanishing points to determine the height of individuals or objects inside photos. (Fspy)<br><br>
-
-
-## **blender_addon_forensic_tool**<br>
-**Language**: Python <br>
-**Overview**: Creating simulations, blah, blah, blah.<br><br>
-
-
-## **computer_writing_tool**<br>
-**Language**: Not a clue<br>
-**Overview**: Piece of software that analyses text, categorises words into groups (verbs, nouns, prepositions, etc.) and uses preset knowledge on sentence structures to write sentences/more.<br><br>
-
-
-## **dnd_map_precedural_gen_tool**<br>
-**Language**: Not a clue <br>
-**Overview**: Precedurally generates tools in different settings for use by DMs and GMs in TTRPG campaigns. Different settings can be changed to tweak results. <br><br>
-
-
-## **text_to_music**<br>
-**Language**: not a clue <br>
-**Overview**: Converts text to music based on a formula. Including tone reading through negativity/positivity of words in sentence, (minor/major). https://www.youtube.com/watch?v=PVT6WpOyf0s&feature=youtu.be<br><br>
-
-
-## **precedurally_generated_evolution_of_civilisation**<br>
-**Language**: Not a clue<br>
-**Overview**: Tweak parameters as the civilisation and planet evolves to create stats and planet image.<br><br>
-
-
-## **dnd_fun_tool**<br>
-**Language**: Not a clue <br>
-**Overview**: Keep track of characters, better combat system, better image display system, better tools for DM.<br><br>
-
-
-## **Free_Worlds_website**<br>
-**Language**: HTML/Javascript<br>
-**Overview**: website go brr.<br><br>
 
 
 ## **full_system_search**<br>
