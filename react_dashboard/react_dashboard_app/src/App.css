@@ -18,17 +18,7 @@
   font-size: large;
 }
 
-body {
-  background: black;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-#mainBox {
-  margin: 2%;
-  border: 1px dashed red;
-  margin-left: 6%;
 }
