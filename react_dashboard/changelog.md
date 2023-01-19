@@ -136,3 +136,9 @@ SyntaxError: Unexpected token (53:40)
             - Colours in terms of a theme
         - [here](https://mui.com/system/getting-started/the-sx-prop/)
     - Can set a constant to apply same styling to everything
+22. Running on work laptop
+    - ` npm install `
+    - ` npm start `
+        - Removed "--openssl-legacy-provider start"
+        - Nope, still not working
+        - Probably a Windows vs Llinux issue
