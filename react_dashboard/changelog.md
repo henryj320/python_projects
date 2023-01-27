@@ -136,9 +136,9 @@ SyntaxError: Unexpected token (53:40)
             - Colours in terms of a theme
         - [here](https://mui.com/system/getting-started/the-sx-prop/)
     - Can set a constant to apply same styling to everything
-22. Running on work laptop
-    - ` npm install `
-    - ` npm start `
-        - Removed "--openssl-legacy-provider start"
-        - Nope, still not working
-        - Probably a Windows vs Llinux issue
+    - Set a layout that I am happy with.
+    - Can you just set two divs like normal HTML, one for navbar, one for everything else?
+22. Next step:
+    - Create two divs, one for sidebar, one for everything else
+    - Create blank grid items similar to that on:
+    https://demos.creative-tim.com/material-dashboard-react/#/dashboard

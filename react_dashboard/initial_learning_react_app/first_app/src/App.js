@@ -64,7 +64,9 @@ class App extends Component {
           </Grid>
         </Box>
 
-        <Box id="mainBox">
+        <br /><br /><br /><br /><br /><br /><br /><br />
+
+        <Box>
           <Grid container spacing={3}>
 
               <Grid item xs={4}
@@ -93,6 +95,79 @@ class App extends Component {
                     <Item>Hey 3</Item>
                   </Grid>
                 </Grid>
+              </Grid>
+
+              <Grid item xs={8} sx={{border: '1px solid green'}}>
+
+                <Grid container xs={12} spacing={4}>
+                  <Grid item xs={6}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={8}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={6}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={3}>
+                    <Item>Hey</Item>
+                  </Grid>
+                  <Grid item xs={9}>
+                    <Item>Hey</Item>
+                  </Grid>
+                </Grid>
+
+              </Grid>
+
+          </Grid>
+        </Box>
+
+
+        <br /><br /><br /><br /><br /><br /><br /><br />
+
+
+        <Box id="mainBox">
+          <Grid container spacing={3}>
+
+              <Grid item xs={4} sx={{border: '1px solid blue'}}
+              >
+
+                <Grid container direction="column" xs={12} spacing={2} alignItems="center"
+                >
+                      
+
+                        <Grid item xs={3}
+                          sx={{
+                            width: '80%'
+                          }}
+                        >
+                          <Item>Hey 1</Item>
+                        </Grid>
+                        <br />
+                        <Grid item xs={3}>
+                          <Item>Hey 2</Item>
+                        </Grid>
+                        <br />
+                        <Grid item xs={3}>
+                          <Item>Hey 3</Item>
+                        </Grid>
+                        <br />
+                      </Grid>
               </Grid>
 
               <Grid item xs={8} sx={{border: '1px solid green'}}>
