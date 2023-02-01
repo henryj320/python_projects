@@ -22,3 +22,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#mainDiv {
+  box-shadow: '5px 10px #888888;'
+}
+
+#firstImage {
+  width: 100%;
+}
+
+.cardHeader {
+  text-align: right;
+  margin-right: 2%;
+  margin-left: 45%;
+  border: 1px solid red
+}

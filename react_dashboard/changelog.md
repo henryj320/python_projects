@@ -142,3 +142,20 @@ SyntaxError: Unexpected token (53:40)
     - Create two divs, one for sidebar, one for everything else
     - Create blank grid items similar to that on:
     https://demos.creative-tim.com/material-dashboard-react/#/dashboard
+23. On Golden Pass day (1st Feb 2023). Time to get a basic structure.
+    - Error: ENOSPC: System limit for number of file watchers reached
+        - Opening the terminal
+        - ` echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p `
+    - Useful to know that it runs over the network so you can view it on the work laptop without issue
+    - <Grid> not showing.
+    - ` rm -rf node_modules `
+    - ` rm -f package-lock.json `
+    - ` npm cache clean --force `
+    - ` npm install `
+    - Nope, didnt do anything
+    - I forgot to add a Grid Item
+24. Added some Grid Items
+    - Figured out how to add margins (using [sx={{}}](https://mui.com/system/getting-started/the-sx-prop/))
+    - Figured out drop shadows
+25. How do I do overlayed images on the grid items?
+    - Figured it out. Just using relative positioning
