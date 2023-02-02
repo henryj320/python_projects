@@ -18,17 +18,22 @@
   font-size: large;
 }
 
-body {
-  background: black;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-#mainBox {
-  margin: 2%;
-  border: 1px dashed red;
-  margin-left: 6%;
+#mainDiv {
+  box-shadow: '5px 10px #888888;'
+}
+
+#firstImage {
+  width: 100%;
+}
+
+.cardHeader {
+  text-align: right;
+  margin-right: 2%;
+  margin-left: 45%;
+  border: 1px solid red
 }
