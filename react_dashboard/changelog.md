@@ -159,3 +159,13 @@ SyntaxError: Unexpected token (53:40)
     - Figured out drop shadows
 25. How do I do overlayed images on the grid items?
     - Figured it out. Just using relative positioning
+    - 60px images
+    - width: '4rem',
+      height: '4rem',
+      position: 'relative',
+      left: '7.5%',
+      top: '-75%',
+26. Figured out changing layout based on size
+    -  xs, sm, md, lg, and xl
+    - Change styling based on size
+27. Closing branch "feature/running_react_template".
