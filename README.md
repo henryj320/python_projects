@@ -1,5 +1,5 @@
 # **python_projects**
-Last update: 2022-10-15 01:37
+Last update: 2023-01-04 21:17
 
 <br>
 Make sure to update the Projects table: [All Projects Table](https://github.com/users/henryj320/projects/5)
@@ -51,46 +51,6 @@ Make sure to update the Projects table: [All Projects Table](https://github.com/
 **Overview**: Write a program that sends and receives message from the basics. Generate a TCP segment with all of the fields in binary. Set up a port to send on and a port to receive on. Use your Java code as a reference. Importantly, the receiver needs to be listening on the port. Use datasubs to find how to run an app on a certain portand listen to requests. Set out the plan logically.<br><br>
 
 
-## **height_determination_software**<br>
-**Language**: Not a clue<br>
-**Overview**: Use vanishing points to determine the height of individuals or objects inside photos. (Fspy)<br><br>
-
-
-## **blender_addon_forensic_tool**<br>
-**Language**: Python <br>
-**Overview**: Creating simulations, blah, blah, blah.<br><br>
-
-
-## **computer_writing_tool**<br>
-**Language**: Not a clue<br>
-**Overview**: Piece of software that analyses text, categorises words into groups (verbs, nouns, prepositions, etc.) and uses preset knowledge on sentence structures to write sentences/more.<br><br>
-
-
-## **dnd_map_precedural_gen_tool**<br>
-**Language**: Not a clue <br>
-**Overview**: Precedurally generates tools in different settings for use by DMs and GMs in TTRPG campaigns. Different settings can be changed to tweak results. <br><br>
-
-
-## **text_to_music**<br>
-**Language**: not a clue <br>
-**Overview**: Converts text to music based on a formula. Including tone reading through negativity/positivity of words in sentence, (minor/major). https://www.youtube.com/watch?v=PVT6WpOyf0s&feature=youtu.be<br><br>
-
-
-## **precedurally_generated_evolution_of_civilisation**<br>
-**Language**: Not a clue<br>
-**Overview**: Tweak parameters as the civilisation and planet evolves to create stats and planet image.<br><br>
-
-
-## **dnd_fun_tool**<br>
-**Language**: Not a clue <br>
-**Overview**: Keep track of characters, better combat system, better image display system, better tools for DM.<br><br>
-
-
-## **Free_Worlds_website**<br>
-**Language**: HTML/Javascript<br>
-**Overview**: website go brr.<br><br>
-
-
 ## **full_system_search**<br>
 **Language**: Python<br>
 **Overview**: Similar to DocumentSystem to Git. Make a program that takes a searchterm and searches the entire computer for any documents named or containing the term. Make it show sections at a time with a progress bar to learn Python progress bars in the terminal. Add a parameter for OS so that OS files can be ignored. Output should be something like "Found: X occurrences of "example" in Documents, Y occurences of "example" in Pictures.<br><br>
@@ -98,7 +58,19 @@ Make sure to update the Projects table: [All Projects Table](https://github.com/
 
 ## **react_dashboard**<br>
 **Language**: React<br>
-**Overview**: Develop a React frontend using a [template](https://www.creative-tim.com/templates/react-free). Develop it from scratch making use of a template's components when required. Have separate pages for each Python project. Using axios like you did in the devops sprint to connect to a running API and output the results.
+**Overview**: Develop a React frontend using a [template](https://www.creative-tim.com/templates/react-free). Develop it from scratch making use of a template's components when required. Have separate pages for each Python project. Using axios like you did in the devops sprint to connect to a running API and output the results.<br><br>
+
+
+## **run_predictions**<br>
+**Language**: Python<br>
+**Overview**: A Jupyter Notebooks program to chart out your running progress. In future, it could be adapted into a React page. The charts would show:
+- Weekly distance
+- Weekly average running pace
+- Number of runs each week<br>
+
+This project could then be added to in order to create predictions. In other words, "if you continue with this average, then this is where you will be in 6 weeks". You could improve this further to add your goals and the chart could show what you would need to do. For example:
+- If your goal is to increase pace from 7:30 average to 6:30 average, then pace needs to increase by x each week (with a knowledge on the limit of realistic pace increase).<br><br>
+
 
 <br><br>
 
@@ -147,7 +119,7 @@ You may need to update the host and port.<br><br>
 **Date Started**: 2022-09-29<br>
 **Date Completed**: 2022-10-09 (10 days)<br>
 **Language**: Python<br>
-**Overview**: Input which exercises you completed this week. The system outputs which of the main muscles you missed this week and what exercises you could do to train them.<br>
+**Overview**: Input which exercises you completed this week. The system outputs which of the main muscles you missed this week and what exercises you could do to train them. In the future, this could be updated to also conain an image of the muscles hit and missed, just like on Garmin workouts.<br>
 **Result**: I now have a muscle_checker Flask website which can be run anytime and outputs the muscles hit, muscles missed and what exercises to do to hit them.<br>
 **Running the Project**: To run the project, follow these steps:
 - Run "git clone ...".

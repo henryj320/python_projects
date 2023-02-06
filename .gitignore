@@ -4,3 +4,6 @@
 *.egg-info
 muscle_checker/insert_calendar_text.txt
 */__pycache__/*
+*/.ipynb_checkpoints/*
+react_dashboard/initial_learning_react_app/first_app/node_modules/*
+react_dashboard/initial_learning_react_app/material_dashboard_app/*
